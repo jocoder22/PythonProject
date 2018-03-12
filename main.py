@@ -29,3 +29,10 @@ def revesl(for_list):
 	for i in range(len(for_list)-1,-1,-1):
 		newlist.append(for_list[i])
 	return newlist
+
+# reverse for tuple
+def reveslt(for_tuple):
+	newtuple = ()
+	for i in range(len(for_tuple)-1,-1,-1):
+		newtuple += (for_tuple[i],)
+	return newtuple
