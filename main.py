@@ -22,3 +22,10 @@ x_reversed = "".join(data[i] for i in range(len(data)-1, -1, -1))
 print(xl_reversed)
 print(xt_reversed)
 print(x_reversed)
+
+# reverse for list
+def revesl(for_list):
+	newlist = []
+	for i in range(len(for_list)-1,-1,-1):
+		newlist.append(for_list[i])
+	return newlist
