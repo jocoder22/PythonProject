@@ -7,5 +7,5 @@ def reverse1(parameter):
     return parameter[::-1]
 
 # for list
-def reverse2(parameter):
+def reverse2(parameter_list):
     return parameter.reverse()
