@@ -24,15 +24,22 @@ print(xt_reversed)
 print(x_reversed)
 
 # reverse for list
-def revesl(for_list):
+def revelist(for_list):
 	newlist = []
 	for i in range(len(for_list)-1,-1,-1):
 		newlist.append(for_list[i])
 	return newlist
 
 # reverse for tuple
-def reveslt(for_tuple):
+def revetup(for_tuple):
 	newtuple = ()
 	for i in range(len(for_tuple)-1,-1,-1):
 		newtuple += (for_tuple[i],)
 	return newtuple
+
+# reverse for string
+def revest(for_string):
+	newstring = ''
+	for i in range(len(for_string)-1,-1,-1):
+		newstring += (for_string[i])
+	return newstring
