@@ -43,3 +43,39 @@ def revest(for_string):
 	for i in range(len(for_string)-1,-1,-1):
 		newstring += (for_string[i])
 	return newstring
+
+
+
+# Implement Balanced check
+
+def balance_check(s):
+	'''
+	This is the docstring
+	'''
+	if len(s) % 2 != 0:
+		return False
+
+	openings = set('{[(')
+	matches = set([('(',')'), ('{','}'), ('[',']')])
+	
+	stack = []
+
+	for item in s:
+		if item in  openings:
+			stack.append(item)
+
+		else:
+			if len(stack) == 0:
+				return False
+			
+			last_opening = stack.pop()
+
+			if (last_opening, item) not in matches:
+				return False
+
+
+	return len(stack) == 0
+
+balance_check('[]')
+balance_check('(){}{{{}}}[][[]]')
+balance_check('((()))[][][][{{}])')
