@@ -50,7 +50,12 @@ def revest(for_string):
 
 def balance_check(s):
 	'''
-	This is the docstring
+	This function check for balanced parentheses in a string s, the string
+	contains only parentheses without spaces or other strings or numbers
+
+
+	Input: strings
+	output: Boolean
 	'''
 	if len(s) % 2 != 0:
 		return False
@@ -79,3 +84,6 @@ def balance_check(s):
 balance_check('[]')
 balance_check('(){}{{{}}}[][[]]')
 balance_check('((()))[][][][{{}])')
+
+
+
