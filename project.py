@@ -79,12 +79,26 @@ def revest(for_string):
 
 
 # reverse recursive
-def rev_recur(parameter_list):
+def rev_recur(s):
+	'''
+	This function reverses a given string
 
-	if len(parameter_list) <= 1 :
-		return parameter_list
+	Input: string
+	Output: string
 
-	return rev_recur(parameter_list[1:]) + parameter_list[0]
+	Test:
+	>>> rev_recur('kdkdmfjdiad')
+	'daidjfmdkdk'
+	>>> rev_recur('nam5')
+	'5man'
+	>>> rev_recur('goodluke')
+	'ekuldoog'
+
+	'''
+	if len(s) <= 1 :
+		return s
+
+	return rev_recur(s[1:]) + s[0]
 
 
 # Implement Balanced check
