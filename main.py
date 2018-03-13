@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import doctest
 
 # reverse
 xlist = [5,6,7, "man", 8, 9,"girl"]
@@ -56,6 +57,14 @@ def balance_check(s):
 
 	Input: strings
 	output: Boolean
+
+	Test:
+	>>> balance_check('[]')
+	True
+	>>> balance_check('(){}{{{}}}[][[]]')
+	True
+	>>> balance_check('((()))[][][][{{}])')
+	False
 	'''
 	if len(s) % 2 != 0:
 		return False
@@ -81,9 +90,11 @@ def balance_check(s):
 
 	return len(stack) == 0
 
-balance_check('[]')
-balance_check('(){}{{{}}}[][[]]')
-balance_check('((()))[][][][{{}])')
+
+
+
+if __name__ == '__main__':
+	doctest.testmod(verbose=True)
 
 
 
