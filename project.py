@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import doctest
 
+
 # reverse
 xlist = [5,6,7, "man", 8, 9,"girl"]
 xtuple = (7,4,"gon","dog")
@@ -23,10 +24,13 @@ def reverse2(parameter_list):
 	>>> reverse2(['man', 8, 'open', 'bed', 5])
 	[5, 'bed', 'open', 8, 'man']
 	>>> reverse2(['good', 'lean', 'luke', 'shiny'])
-	['shiny','luke', 'lean', 'good']
+	['shiny', 'luke', 'lean', 'good']
 	'''
-    return parameter.reverse()
+	parameter_list.reverse()
+	return parameter_list
 
+    
+print(reverse2([3, 6, 7, 1, 2, 5]))
 data = xlist
 xl_reversed =  list(data[i] for i in range(len(data)-1, -1, -1))
 data = xtuple
@@ -40,6 +44,20 @@ print(x_reversed)
 
 # reverse for list
 def revelist(for_list):
+	'''
+	This function reverses a given list
+
+	Input: List
+	Output: List
+
+	Test:
+	>>> revelist([3, 6, 7, 1, 2, 5])
+	[5, 2, 1, 7, 6, 3]
+	>>> revelist(['man', 8, 'open', 'bed', 5])
+	[5, 'bed', 'open', 8, 'man']
+	>>> revelist(['good', 'lean', 'luke', 'shiny'])
+	['shiny', 'luke', 'lean', 'good']
+	'''
 	newlist = []
 	for i in range(len(for_list)-1,-1,-1):
 		newlist.append(for_list[i])
