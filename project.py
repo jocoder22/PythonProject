@@ -78,6 +78,14 @@ def revest(for_string):
 	return newstring
 
 
+# reverse recursive
+def rev_recur(parameter_list):
+
+	if len(parameter_list) <= 1 :
+		return parameter_list
+
+	return rev_recur(parameter_list[1:]) + parameter_list[0]
+
 
 # Implement Balanced check
 
