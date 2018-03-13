@@ -11,6 +11,20 @@ def reverse1(parameter):
 
 # for list
 def reverse2(parameter_list):
+	'''
+	This function reverses a given list
+
+	Input: List
+	Output: List
+
+	Test:
+	>>> reverse2([3, 6, 7, 1, 2, 5])
+	[5, 2, 1, 7, 6, 3]
+	>>> reverse2(['man', 8, 'open', 'bed', 5])
+	[5, 'bed', 'open', 8, 'man']
+	>>> reverse2(['good', 'lean', 'luke', 'shiny'])
+	['shiny','luke', 'lean', 'good']
+	'''
     return parameter.reverse()
 
 data = xlist
