@@ -154,7 +154,7 @@ def permute(s):
 	This function return permutation of a given string
 
 	Input: string
-	
+
 	Output: List
 	Test:
 	>>> permute('peter')
@@ -162,10 +162,11 @@ def permute(s):
 	>>> permute('maNgO')
 	 
 	>>> permute('345') 
-	 
+
+	>>> permute('ABC')
+	['ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA']
 	'''
 	
-
 	# base case
 	if len(s) == 1:
 		output = [s]
