@@ -185,6 +185,21 @@ def permute(s):
 
 # Fibonnaci Sequence
 def fibo_iter():
+	'''
+	This function returns the sum of Fibonnaci Sequence
+	 
+	Input: Interger
+	 
+	Output: Interger
+	 
+	Test:
+	>>> fibo_iter(10)
+	55
+	>>> fibo_iter(100)
+	 
+	>>> fibo_iter(0)
+	0
+	'''
 	a,b = 0, 1
 
 	for i in range(n):
