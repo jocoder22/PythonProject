@@ -184,7 +184,7 @@ def permute(s):
 
 
 # Fibonnaci Sequence
-def fibo_iter():
+def fibo_iter(n):
 	'''
 	This function returns the sum of Fibonnaci Sequence
 	 
@@ -196,7 +196,7 @@ def fibo_iter():
 	>>> fibo_iter(10)
 	55
 	>>> fibo_iter(100)
-	 
+	354224848179261915075
 	>>> fibo_iter(0)
 	0
 	'''
