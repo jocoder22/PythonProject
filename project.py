@@ -211,10 +211,10 @@ def fibo_iter(n):
 	>>> fibo_iter(0)
 	0
 	'''
-	a,b = 0, 1
+	a, b = 0, 1
 
 	for i in range(n):
-		a,b = b, a+b
+		a, b = b, a+b
 	
 	return a
 
@@ -222,19 +222,46 @@ def fibo_iter(n):
 
 @Memiozation
 def fibo_iter1(n):
-	a,b = 1, 1
+	a, b = 1, 1
 
 	for i in range(n -1):
-		a,b = b, a+b
+		a, b = b, a+b
 	return a
 
 
+def fibo_rec(n):
+	# Base case
+	if n == 0 or n == 1:
+		return n
+	else:
+		return fibo_rec(n-1) + fibo_rec(n-2)
+	
+
+# Using cache for memiozation
+def fibo_d(n):
+	cache = [None] * (n+1)
+	# Base case using recursive method
+	if n == 0 or n == 1:
+		return n
+
+	# check cache
+	if cache[n] != None:
+		return cache[n]
+
+	# keep setting Cache
+	cache[n] = fibo_d(n-1) + fibo_d(n -2)
+
+	return cache[n]
 
 
 
+# 
+
+print(fibo_d(10))
 
 if __name__ == '__main__':
-	doctest.testmod(verbose=True)
+	# doctest.testmod(verbose=True)
+	doctest.testmod()
 
 
 
