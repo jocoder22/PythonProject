@@ -182,7 +182,15 @@ def permute(s):
 	
 	return output
 
-permute("ABC")
+
+# Fibonnaci Sequence
+def fibo_iter():
+	a,b = 0, 1
+
+	for i in range(n):
+		a,b = b, a+b
+	
+	return a
 
 
 
