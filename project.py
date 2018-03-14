@@ -101,6 +101,8 @@ def rev_recur(s):
 	return rev_recur(s[1:]) + s[0]
 
 
+
+
 # Implement Balanced check
 
 def balance_check(s):
@@ -143,6 +145,23 @@ def balance_check(s):
 
 
 	return len(stack) == 0
+
+
+
+# Permutation using recursion
+def permute(s):
+	output = []
+
+	# base case
+	if len(s) == 1:
+		output = [s]
+	
+	else:
+		for i, letter in enumerate(s):
+			for p in permute(s[:i] + s[i+1:]):
+				output += [letter + p]
+	
+	return output
 
 
 
