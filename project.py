@@ -150,7 +150,21 @@ def balance_check(s):
 
 # Permutation using recursion
 def permute(s):
-	output = []
+	'''
+	This function return permutation of a given string
+
+	Input: string
+	
+	Output: List
+	Test:
+	>>> permute('peter')
+	 
+	>>> permute('maNgO')
+	 
+	>>> permute('345') 
+	 
+	'''
+	
 
 	# base case
 	if len(s) == 1:
@@ -167,6 +181,7 @@ def permute(s):
 	
 	return output
 
+permute("ABC")
 
 
 
