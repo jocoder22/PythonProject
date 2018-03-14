@@ -2,6 +2,17 @@
 import doctest
 
 
+class Memiozation:
+	def __init__(self, fn):
+		self.fn = fn
+		self.memorize = {}
+
+	def __call__(self, arg):
+		if arg not in self.memorize:
+			self.memorize[arg] = self.fn(arg)
+			return self.memorize[arg]
+
+
 # reverse
 xlist = [5,6,7, "man", 8, 9,"girl"]
 xtuple = (7,4,"gon","dog")
@@ -206,6 +217,19 @@ def fibo_iter(n):
 		a,b = b, a+b
 	
 	return a
+
+
+
+@Memiozation
+def fibo_iter1(n):
+	a,b = 1, 1
+
+	for i in range(n -1):
+		a,b = b, a+b
+	return a
+
+
+
 
 
 
