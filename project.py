@@ -156,17 +156,17 @@ def permute(s):
 	Input: string
 
 	Output: List
-	Test:
-	>>> permute('peter')
-	 
-	>>> permute('maNgO')
-	 
-	>>> permute('345') 
 
+	Test:
+	>>> permute('mNgO')
+	['mNgO', 'mNOg', 'mgNO', 'mgON', 'mONg', 'mOgN', 'NmgO', 'NmOg', 'NgmO', 'NgOm', 'NOmg', 'NOgm', 'gmNO', 'gmON', 'gNmO', 'gNOm', 'gOmN', 'gONm', 'OmNg', 'OmgN', 'ONmg', 'ONgm', 'OgmN', 'OgNm']
+	>>> permute('345') 
+	['345', '354', '435', '453', '534', '543']
 	>>> permute('ABC')
 	['ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA']
 	'''
-	
+
+	output = []
 	# base case
 	if len(s) == 1:
 		output = [s]
@@ -174,11 +174,11 @@ def permute(s):
 	else:
 		for i, letter in enumerate(s):
 			for p in permute(s[:i] + s[i+1:]):
-				print(f'Before addition the letter was : {letter}')
-				print(f'Before addition letter to permute was : {p}')
-				print(f'Before addition  output was : {output}')
+				# print(f'Before addition the letter was : {letter}')
+				# print(f'Before addition letter to permute was : {p}')
+				# print(f'Before addition  output was : {output}')
 				output += [letter + p]
-				print(f'After addition  output is now : {output}')
+				# print(f'After addition  output is now : {output}')
 	
 	return output
 
