@@ -255,6 +255,21 @@ def fibo_d(n):
 
 
 
+def gen_fibon(n):
+
+	a = 1
+	b = 1
+
+	for i in range(n):
+		yield a
+		a, b =  b, a+b
+
+for number in gen_fibon(10):
+	print(number)
+
+
+
+
 # Coin change problem
 def coinchange(target, coins_list):
 	# Default number of coins set to target
@@ -311,6 +326,8 @@ def coinchange_M(target, coins_list, cache):
 				cache[target] = min_coins
 
 	return min_coins
+
+
 
 
 cache2 = [0] * (74 + 1)
