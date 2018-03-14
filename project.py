@@ -255,9 +255,69 @@ def fibo_d(n):
 
 
 
-# 
+# Coin change problem
+def coinchange(target, coins_list):
+	# Default number of coins set to target
+	# Based on assumption that the least coin denomination to be 1 unit
+	min_coins = target
 
+	# check if the target amount is in the list already
+	if target in coins_list:
+		return 1
+
+	else:
+		# For every coin value that is less than the target
+		for i in [c for c in coins_list if c <= target]:
+			# num_coins is the counter here
+			# Add 1 to counter per each recurssion
+			# substract the coin value from the target
+			num_coins = 1 + coinchange(target-i, coins_list)
+
+			if num_coins < min_coins:
+				min_coins = num_coins
+
+	return min_coins
+
+
+
+
+# Coin change problem 2
+# Using Memiozation
+# This is time efficient but memory expensive
+def coinchange_M(target, coins_list, cache):
+	# Default number of coins set to target
+	# Based on assumption that the least coin denomination to be 1 unit
+	# cache = [0] * (target + 1)
+	min_coins = target
+
+	# check if the target amount is in the list already
+	if target in coins_list:
+		cache[target] = 1
+		return 1
+	
+	elif cache[target] > 0:
+		return cache[target]
+
+	else:
+		# For every coin value that is less than the target
+		for i in [c for c in coins_list if c <= target]:
+			# num_coins is the counter here
+			# Add 1 to counter per each recurssion
+			# substract the coin value from the target
+			num_coins = 1 + coinchange_M(target-i, coins_list, cache)
+
+			if num_coins < min_coins:
+				min_coins = num_coins
+				cache[target] = min_coins
+
+	return min_coins
+
+
+cache2 = [0] * (74 + 1)
 print(fibo_d(10))
+print(coinchange(15,[1,5,10]))
+print(coinchange_M(74,[1,5,10,25], cache2))
+
 
 if __name__ == '__main__':
 	# doctest.testmod(verbose=True)
