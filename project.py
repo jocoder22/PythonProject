@@ -159,7 +159,11 @@ def permute(s):
 	else:
 		for i, letter in enumerate(s):
 			for p in permute(s[:i] + s[i+1:]):
+				print(f'Before addition the letter was : {letter}')
+				print(f'Before addition letter to permute was : {p}')
+				print(f'Before addition  output was : {output}')
 				output += [letter + p]
+				print(f'After addition  output is now : {output}')
 	
 	return output
 
