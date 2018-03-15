@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-import doctest, random, pdb
-
+import doctest, random
+import pdb; pdb.set_trace()
 
 class Memiozation:
 	def __init__(self, fn):
@@ -376,7 +376,7 @@ print(coinchange_M(74,[1,5,10,25], cache2))
 # Python debugger
 t = [5, 6, 9, 4]
 u = [4, 8]
-pdb.set_trace()
+# pdb.set_trace()
 print(t * u)
 
 
