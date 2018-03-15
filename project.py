@@ -336,6 +336,30 @@ def coinchange_M(target, coins_list, cache):
 
 
 
+def prod(n):
+	'''
+	This function returns the product of positive number up to n
+	 
+	Input: Integer
+	 
+	Output: Interger
+	 
+	Test:
+	>>> prod(0)
+	0
+	>>> prod(1) 
+	1
+	>>> prod(5) 
+	120
+	'''
+	if n <= 1:
+		return n
+	else:
+		return n * prod(n - 1)
+
+
+
+
 cache2 = [0] * (74 + 1)
 print(fibo_d(10))
 print(coinchange(15,[1,5,10]))
