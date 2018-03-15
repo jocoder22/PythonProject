@@ -448,8 +448,19 @@ test_patterns2 = [ '[a-z]',  		# lower case a to z
 				  '[A-Z][a-z]+',	# Upper case A to Z and one or more lower case a to z
 				]
 
+
+test_text3 = 'This is a string with Numbers 1238, symbols #$hast, 234-real'
+test_patterns3 = [ r'\d+',  	# sequence of digits
+				  r'\D+',		# sequence of non digits
+				  r'\s+',		# sequence of whitespaces
+				  r'\S+',		# sequence of non whitespaces
+				  r'\w+',		# alphanumeric characters
+				  r'\W+',		# non-alphanumeric characters
+				]
+
 mult_find(test_patterns,test_text)
 mult_find(test_patterns2,test_text2)
+mult_find(test_patterns3,test_text3)
 
 # Exclusing by ^ e.g [^...]
 text_exclusion = 'Hello! Thanks. What is this?. I am fine.'
