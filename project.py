@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import doctest
+import doctest, random
 
 
 class Memiozation:
@@ -269,6 +269,12 @@ for number in gen_fibon(10):
 
 
 
+def rand_num(low, high, n):
+	for i in range(n):
+		yield random.randint(low, high)
+
+for num in rand_num(2, 12, 7):
+	print(num)
 
 # Coin change problem
 def coinchange(target, coins_list):
