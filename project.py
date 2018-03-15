@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-import doctest, random
-import pdb; pdb.set_trace()
+import doctest, random, timeit
+# import pdb; pdb.set_trace()
 
 class Memiozation:
 	def __init__(self, fn):
@@ -364,10 +364,30 @@ def prod(n):
 
 
 
+
+def prod2(N):
+	'''
+	>>> prod2(5)
+	120
+	'''
+	if N <= 1:
+		return N
+	else:
+		result = 1
+		for i in range(1, N + 1):
+			result *= i
+	return result
+
 cache2 = [0] * (74 + 1)
 print(fibo_d(10))
 print(coinchange(15,[1,5,10]))
 print(coinchange_M(74,[1,5,10,25], cache2))
+
+
+
+# using timeit
+print(timeit.timeit("prod(30)", globals=globals()))
+print(timeit.timeit("prod2(30)", globals=globals()))
 
 
 
@@ -377,11 +397,13 @@ print(coinchange_M(74,[1,5,10,25], cache2))
 t = [5, 6, 9, 4]
 u = [4, 8]
 # pdb.set_trace()
-print(t * u)
+# print(t * u)
 
 
 if __name__ == '__main__':
 	# doctest.testmod(verbose=True)
+	import timeit
+	print(timeit.timeit("prod(30)", setup="from __main__ import prod"))
 	doctest.testmod()
 
 
