@@ -345,14 +345,16 @@ def prod(n):
 	Output: Interger
 	 
 	Test:
-	>>> prod(0)
-	0
+	>>> prod(-2)
+	The number must be a postive Integer
 	>>> prod(1) 
 	1
 	>>> prod(5) 
 	120
 	'''
-	if n <= 1:
+	if n < 0:
+		print('The number must be a postive Integer')
+	elif n <= 1:
 		return n
 	else:
 		return n * prod(n - 1)
@@ -367,8 +369,8 @@ print(coinchange_M(74,[1,5,10,25], cache2))
 
 
 if __name__ == '__main__':
-	# doctest.testmod(verbose=True)
-	doctest.testmod()
+	doctest.testmod(verbose=True)
+	# doctest.testmod()
 
 
 
