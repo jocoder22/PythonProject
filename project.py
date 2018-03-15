@@ -347,6 +347,8 @@ def prod(n):
 	Test:
 	>>> prod(-2)
 	The number must be a postive Integer
+	>>> prod(0)
+	0
 	>>> prod(1) 
 	1
 	>>> prod(5) 
