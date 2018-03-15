@@ -388,6 +388,8 @@ print(coinchange_M(74,[1,5,10,25], cache2))
 # using timeit
 print(timeit.timeit("prod(30)", globals=globals()))
 print(timeit.timeit("prod2(30)", globals=globals()))
+print(timeit.timeit('"-".join(str(n) for n in range(101))', number=10000))
+print(timeit.timeit('"-".join(map(str,range(101)))', number=10000))
 
 
 
