@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import doctest, random
+import doctest, random, pdb
 
 
 class Memiozation:
@@ -370,9 +370,19 @@ print(coinchange(15,[1,5,10]))
 print(coinchange_M(74,[1,5,10,25], cache2))
 
 
+
+
+
+# Python debugger
+t = [5, 6, 9, 4]
+u = [4, 8]
+pdb.set_trace()
+print(t * u)
+
+
 if __name__ == '__main__':
-	doctest.testmod(verbose=True)
-	# doctest.testmod()
+	# doctest.testmod(verbose=True)
+	doctest.testmod()
 
 
 
