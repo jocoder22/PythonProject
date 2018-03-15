@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import doctest, random, timeit
+import doctest, random, timeit, re
 # import pdb; pdb.set_trace()
 
 class Memiozation:
@@ -401,6 +401,45 @@ u = [4, 8]
 # pdb.set_trace()
 # print(t * u)
 
+
+
+
+
+# Regular Expression
+def mult_find(patterns, text):
+	'''
+	This function
+	 
+	Input:
+	 
+	Output:
+	 
+	Test:
+	>>> 
+	 
+	>>> 
+	 
+	>>> 
+	 
+	'''
+	for pattern in patterns:
+		print(f'Searching for {pattern} in {text}')
+		print(re.findall(pattern, text))
+		print('\n')
+
+
+test_text = 'sdsd..sssddd...sdddsddd...dsds...dsssss..sdddd..sssdd..ssdsssd'
+test_patterns = [ 'sd*',  		# s followed by zero or more d's
+				  'sd+',		# s followed by one or more d's
+				  'sd?',		# s followed by zero or one d's
+				  'sd{3}',		# s followed by three d's
+				  'sd{2,3}',	# s followed by two or three d's
+				  's+d',		# one or more s's followed by d
+				  '[sd]',		# either s or d
+				  's[sd]+', 	# s followed by one or more of either s or d
+				]
+
+mult_find(test_patterns,test_text)
 
 if __name__ == '__main__':
 	# doctest.testmod(verbose=True)
