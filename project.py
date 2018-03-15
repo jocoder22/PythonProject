@@ -386,10 +386,10 @@ print(coinchange_M(74,[1,5,10,25], cache2))
 
 
 # using timeit
-print(timeit.timeit("prod(30)", globals=globals()))
-print(timeit.timeit("prod2(30)", globals=globals()))
-print(timeit.timeit('"-".join(str(n) for n in range(101))', number=10000))
-print(timeit.timeit('"-".join(map(str,range(101)))', number=10000))
+# print(timeit.timeit("prod(30)", globals=globals()))
+# print(timeit.timeit("prod2(30)", globals=globals()))
+# print(timeit.timeit('"-".join(str(n) for n in range(101))', number=10000))
+# print(timeit.timeit('"-".join(map(str,range(101)))', number=10000))
 
 
 
@@ -428,7 +428,9 @@ def mult_find(patterns, text):
 		print('\n')
 
 
+
 test_text = 'sdsd..sssddd...sdddsddd...dsds...dsssss..sdddd..sssdd..ssdsssd'
+test_text2 = 'This is an example. Let see if there are A b C D e in letters'
 test_patterns = [ 'sd*',  		# s followed by zero or more d's
 				  'sd+',		# s followed by one or more d's
 				  'sd?',		# s followed by zero or one d's
@@ -439,12 +441,36 @@ test_patterns = [ 'sd*',  		# s followed by zero or more d's
 				  's[sd]+', 	# s followed by one or more of either s or d
 				]
 
+
+test_patterns2 = [ '[a-z]',  		# lower case a to z
+				  '[A-Z]',			# Upper case A to Z
+				  '[a-zA-Z]',		# lower case a to z or upper case A to Z
+				  '[A-Z][a-z]+',	# Upper case A to Z and one or more lower case a to z
+				]
+
 mult_find(test_patterns,test_text)
+mult_find(test_patterns2,test_text2)
+
+# Exclusing by ^ e.g [^...]
+text_exclusion = 'Hello! Thanks. What is this?. I am fine.'
+pattern_exclusion = '[^!.? ]+'
+
+print(re.findall(pattern_exclusion,text_exclusion))
+
+
+
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
 	# doctest.testmod(verbose=True)
-	import timeit
-	print(timeit.timeit("prod(30)", setup="from __main__ import prod"))
+	# import timeit
+	# print(timeit.timeit("prod(30)", setup="from __main__ import prod"))
 	doctest.testmod()
 
 
