@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import doctest, random, timeit, re
+from functools import reduce
 # import pdb; pdb.set_trace()
 
 class Memiozation:
@@ -378,6 +379,13 @@ def prod2(N):
 			result *= i
 	return result
 
+
+# product using reduce
+
+def prod3(N):
+	lst = list(range(1, N+1))
+	return reduce(lambda x,y: x*y, lst)
+
 cache2 = [0] * (74 + 1)
 print(fibo_d(10))
 print(coinchange(15,[1,5,10]))
@@ -388,6 +396,7 @@ print(coinchange_M(74,[1,5,10,25], cache2))
 # using timeit
 # print(timeit.timeit("prod(30)", globals=globals()))
 # print(timeit.timeit("prod2(30)", globals=globals()))
+# print(timeit.timeit("prod3(30)", globals=globals()))
 # print(timeit.timeit('"-".join(str(n) for n in range(101))', number=10000))
 # print(timeit.timeit('"-".join(map(str,range(101)))', number=10000))
 
