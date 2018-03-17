@@ -8,8 +8,20 @@ and will monitor for code changes
 
 
 def permute(s):
-    out = []
-
+    '''
+    This function 
+     
+    Input: 
+    Output: 
+     
+    Test: 
+    >>> permute('ABC')
+     
+    >>> permute('123')
+     
+    >>> permute('E56T')
+     
+    '''
     # Base Case
     if len(s) == 1:
         out = [s]
@@ -30,4 +42,4 @@ def permute(s):
 
 
 if __name__ == '___main__':
-    doctest.testmod()
+    doctest.testmod(verbose=True)
