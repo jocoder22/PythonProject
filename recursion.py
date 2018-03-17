@@ -9,19 +9,20 @@ and will monitor for code changes
 
 def permute(s):
     '''
-    This function 
+    This function returns the permutation of a given string
      
-    Input: 
-    Output: 
+    Input: string
+    Output: string
      
     Test: 
-    >>> permute('ABC')
-     
+    >>> permute('AFG')
+    ['AFG', 'AGF', 'FAG', 'FGA', 'GAF', 'GFA']
     >>> permute('123')
-     
-    >>> permute('E56T')
-     
+    ['123', '132', '213', '231', '312', '321']
+    >>> permute('E T')
+    ['E T', 'ET ', ' ET', ' TE', 'TE ', 'T E']
     '''
+    out = []
     # Base Case
     if len(s) == 1:
         out = [s]
@@ -33,13 +34,10 @@ def permute(s):
     
     return out
 
+print(permute('ABC'))
 
-
-
-
-
-
-
-
-if __name__ == '___main__':
+if __name__ == '__main__':
     doctest.testmod(verbose=True)
+
+# if __name__ == '__main__':
+# 	doctest.testmod(verbose=True)

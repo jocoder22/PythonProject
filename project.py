@@ -488,10 +488,10 @@ print(re.findall(pattern_exclusion,text_exclusion))
 
 
 if __name__ == '__main__':
-	# doctest.testmod(verbose=True)
+	doctest.testmod(verbose=True)
 	# import timeit
 	# print(timeit.timeit("prod(30)", setup="from __main__ import prod"))
-	doctest.testmod()
+	# doctest.testmod()
 
 
 
