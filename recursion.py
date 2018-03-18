@@ -34,10 +34,7 @@ def permute(s):
     
     return out
 
-print(permute('ABC'))
+
 
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
-
-# if __name__ == '__main__':
-# 	doctest.testmod(verbose=True)
