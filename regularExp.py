@@ -4,11 +4,11 @@ import re, doctest, timeit
 # Regular Expression
 def mult_find(patterns, text):
 	'''
-	This function
+	This function finds patterns in a given string
 	 
-	Input:
+	Input: String
 	 
-	Output:
+	Output: List
 	 
 	Test:
 	>>> 
