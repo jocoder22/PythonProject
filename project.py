@@ -414,14 +414,6 @@ u = [4, 8]
 
 
 
-
-
-
-
-
-
-
-
 if __name__ == '__main__':
 	doctest.testmod(verbose=True)
 	# import timeit
