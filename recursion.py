@@ -92,6 +92,11 @@ def prod3(N):
 
 
 
+# using timeit
+print(timeit.timeit("prod(30)", globals=globals()))
+print(timeit.timeit("prod2(30)", globals=globals()))
+print(timeit.timeit("prod3(30)", globals=globals()))
+
 
 
 if __name__ == '__main__':
