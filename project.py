@@ -337,55 +337,6 @@ def coinchange_M(target, coins_list, cache):
 
 
 
-def prod(n):
-	'''
-	This function returns the product of positive number up to n
-	 
-	Input: Integer
-	 
-	Output: Interger
-	 
-	Test:
-	>>> prod(-2)
-	The number must be a postive Integer
-	>>> prod(0)
-	0
-	>>> prod(1) 
-	1
-	>>> prod(5) 
-	120
-	'''
-	if n < 0:
-		print('The number must be a postive Integer')
-	elif n <= 1:
-		return n
-	else:
-		return n * prod(n - 1)
-
-
-
-
-
-def prod2(N):
-	'''
-	>>> prod2(5)
-	120
-	'''
-	if N <= 1:
-		return N
-	else:
-		result = 1
-		for i in range(1, N + 1):
-			result *= i
-	return result
-
-
-# product using reduce
-
-def prod3(N):
-	lst = list(range(1, N+1))
-	return reduce(lambda x,y: x*y, lst)
-
 cache2 = [0] * (74 + 1)
 print(fibo_d(10))
 print(coinchange(15,[1,5,10]))
@@ -393,10 +344,8 @@ print(coinchange_M(74,[1,5,10,25], cache2))
 
 
 
+
 # using timeit
-# print(timeit.timeit("prod(30)", globals=globals()))
-# print(timeit.timeit("prod2(30)", globals=globals()))
-# print(timeit.timeit("prod3(30)", globals=globals()))
 # print(timeit.timeit('"-".join(str(n) for n in range(101))', number=10000))
 # print(timeit.timeit('"-".join(map(str,range(101)))', number=10000))
 

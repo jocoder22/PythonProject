@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import doctest
+import doctest, timeit
 '''
 python -i <file_name.py>
 The above will keep your session running
