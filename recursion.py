@@ -36,5 +36,63 @@ def permute(s):
 
 
 
+
+
+
+
+def prod(n):
+	'''
+	This function returns the product of positive number up to n
+	 
+	Input: Integer
+	 
+	Output: Interger
+	 
+	Test:
+	>>> prod(-2)
+	The number must be a postive Integer
+	>>> prod(0)
+	0
+	>>> prod(1) 
+	1
+	>>> prod(5) 
+	120
+	'''
+	if n < 0:
+		print('The number must be a postive Integer')
+	elif n <= 1:
+		return n
+	else:
+		return n * prod(n - 1)
+
+
+
+
+
+def prod2(N):
+	'''
+	>>> prod2(5)
+	120
+	'''
+	if N <= 1:
+		return N
+	else:
+		result = 1
+		for i in range(1, N + 1):
+			result *= i
+	return result
+
+
+# product using reduce
+
+def prod3(N):
+	lst = list(range(1, N+1))
+	return reduce(lambda x,y: x*y, lst)
+
+
+
+
+
+
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
