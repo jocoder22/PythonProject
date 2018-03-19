@@ -21,6 +21,16 @@ MyTree = ['a', # root                                        [a]
 def BinaryTree(r):
     return [r, [], []]
 
+
+def insertLeftChild(root, newbranch):
+    t = root.pop(1)
+
+    if len(t) > 1:
+        root.insert(1, [newbranch,t,[]])
+    else:
+        root.insert(1,[newbranch,[],[]])
+    return root
+
          
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
