@@ -42,7 +42,14 @@ def insertRightChild(root, newbranch):
     return root
 
 
+def getRootVal(root):
+    return root[0]
 
+def setRootVal(root, newval):
+    return root[0] = root(newval)
+
+
+         
          
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
