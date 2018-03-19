@@ -31,6 +31,18 @@ def insertLeftChild(root, newbranch):
         root.insert(1,[newbranch,[],[]])
     return root
 
+
+def insertRightChild(root, newbranch):
+    t = root.pop(2)
+
+    if len(t) > 1:
+        root.insert(2, [newbranch,[],t])
+    else:
+        root.insert(2,[newbranch,[],[]])
+    return root
+
+
+
          
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
