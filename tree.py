@@ -6,11 +6,13 @@ The above will keep your session running
 and will monitor for code changes
 '''
 
-##********************************####
-##    LIST IMPLEMENTATION OF TREE  ###
-##                                 ###
-######################################
-# Tree Implementation as list of lists
+##**************************************####
+##    LIST IMPLEMENTATION OF TREE        ###
+##                                       ###
+############################################
+# Tree Implementation as list of lists   ###
+
+
 MyTree = ['a', # root                                        [a]
            ['b',   # left subtree                           /   \
             ['d', [], []],          #                      /     \
@@ -68,7 +70,49 @@ insertLeftChild(r,4)
 insertRightChild(r, 5)
 
 
+
+##**************************************####
+##   OBJECT ORIENTATION PARADIGM         ###
+##     IMPLEMENTATION OF TREE            ###
+############################################
+# Tree Implementation as class object    ###
+
+
+class Binarytree(object):
+
+    def __init__(self, rootobj):
+        self.key = rootobj
+        self.leftchild = None
+        self.rightchild = None
+
+
+    def insertLeftChild(self, newnode):
+        if self.leftchild == None:
+            self.leftchild = Binarytree(newnode)
+        else:
+            t = Binarytree(newnode)
+            t = self.leftchild
+            self.leftchild = t
+
+    def insertRightChild(self, newnode):
+        if self.rightchild == None:
+            self.rightchild = Binarytree(newnode)
+        else:
+            t = Binarytree(newnode)
+            t = self.rightchild
+            self.rightchild = t
+
+    def getRightChild(self):
+        return self.rightchild
          
+    def getLeftChild(self):
+        return self.leftchild
+
+    def setRootVal(self, obj):
+        self.key = obj
+
+    def getRootVal(self):
+        return self.key
 
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
