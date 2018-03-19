@@ -6,6 +6,10 @@ The above will keep your session running
 and will monitor for code changes
 '''
 
+##********************************####
+##    LIST IMPLEMENTATION OF TREE  ###
+##                                 ###
+######################################
 # Tree Implementation as list of lists
 MyTree = ['a', # root                                        [a]
            ['b',   # left subtree                           /   \
@@ -61,6 +65,7 @@ def getRightchildValue(root):
 # Example implementation
 r = BinaryTree(3)
 insertLeftChild(r,4)
+insertRightChild(r, 5)
 
 
          
