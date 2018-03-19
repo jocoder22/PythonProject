@@ -49,7 +49,13 @@ def setRootVal(root, newval):
     return root[0] = root(newval)
 
 
+def getLeftchildValue(root):
+    return root[1]
+
+def getRightchildValue(root):
+    return root[2]
+
          
-         
+
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
