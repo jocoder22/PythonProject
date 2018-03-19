@@ -114,5 +114,18 @@ class Binarytree(object):
     def getRootVal(self):
         return self.key
 
+
+
+r = Binarytree('b')
+r.getRootVal()
+r.insertRightChild('bx')
+r.getRightChild().getRootVal()
+
+
+
+
+
+
+
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
