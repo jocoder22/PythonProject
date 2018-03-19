@@ -17,6 +17,10 @@ MyTree = ['a', # root                                        [a]
            ]
          ]
 
+
+def BinaryTree(r):
+    return [r, [], []]
+
          
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
