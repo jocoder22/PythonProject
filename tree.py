@@ -122,6 +122,12 @@ class Binarytree(object):
     def getRootVal(self):
         return self.key
 
+    def preorder(self):
+        print(self.key)
+        if self.leftchild:
+            self.leftchild.preorder()
+        if self.rightchild:
+            self.rightchild.preorder()
 
 
 r = Binarytree('b')
