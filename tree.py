@@ -137,6 +137,13 @@ class Binarytree(object):
         if self.rightchild:
             self.rightchild.preorder()
 
+    def preorder(self):
+        if self.leftchild:
+            self.leftchild.preorder()
+        if self.rightchild:
+            self.rightchild.preorder()
+        print(self.key)
+
 
 r = Binarytree('b')
 r.getRootVal()
