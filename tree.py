@@ -71,11 +71,20 @@ def preorder(tree):
         preorder(tree.getLeftChild())
         preorder(tree.getRightChild())
 
+def inorder(tree):
+    if tree != None:
+        inorder(tree.getLeftChild())
+        print(tree.getRootVal())
+        inorder(tree.getRightChild())
+
 def postorder(tree):
     if tree != None:
         postorder(tree.getLeftChild())
         postorder(tree.getRightChild())
         print(tree.getRootVal())
+
+
+        
 
 
 
@@ -137,6 +146,13 @@ class Binarytree(object):
         if self.rightchild:
             self.rightchild.preorder()
 
+    def inorder(self):
+        if self.leftchild:
+            self.leftchild.inorder()
+        print(self.key)
+        if self.rightchild:
+            self.rightchild.inorder()
+
     def postorder(self):
         if self.leftchild:
             self.leftchild.postorder()
@@ -144,12 +160,8 @@ class Binarytree(object):
             self.rightchild.postorder()
         print(self.key)
 
-    def inorder(self):
-        if self.leftchild:
-            self.leftchild.inorder()
-        if self.rightchild:
-            self.rightchild.inorder()
-        print(self.key)
+
+        
 
 r = Binarytree('b')
 r.getRootVal()
