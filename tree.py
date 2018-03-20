@@ -165,7 +165,12 @@ class Binarytree(object):
 
 r = Binarytree('b')
 r.getRootVal()
-r.insertRightChild('bx')
+r.insertLeftChild('b-left')
+tleft = r.leftchild
+tleft.insertLeftChild('b-left-left')
+r.insertRightChild('b-right')
+tRight = r.rightchild
+tRight.insertLeftChild('b-right-left')
 r.getRightChild().getRootVal()
 
 
