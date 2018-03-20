@@ -219,8 +219,14 @@ class BinHeap:
         self.heapList.pop()
         self.percDown(1)
         return retval
-        
 
+    def buildHeap(self, alist):
+        i = len(alist)
+        self.currentSize = len(alist)
+        self.heapList = [0] + alist[i]
+        while (i > 0):
+            self.percDown(i)
+            i = i - 1
 
 
 
