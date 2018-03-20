@@ -86,8 +86,6 @@ def postorder(tree):
 
         
 
-
-
     
 # Example implementation
 r = BinaryTree(3)
@@ -198,13 +196,13 @@ class BinHeap:
         while (i * 2) <= self.currentSize:
             mc = self.minChild(i)
             if self.heapList[i] > self.heapList[mc]:
-                temp = self.heapList[]
+                temp = self.heapList[i]
                 self.heapList[i] = self.heapList[mc]
                 self.heapList[mc] = temp
             i = mc
 
     def minChild(self, i):
-        if i * 2 + 1 > self.heapList:
+        if i * 2 + 1 > self.currentSize:
             return i * 2
         else:
             if self.heapList[i * 2] < self.heapList[i * 2 + 1]:
@@ -227,6 +225,8 @@ class BinHeap:
         while (i > 0):
             self.percDown(i)
             i = i - 1
+
+
 
 
 
