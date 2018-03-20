@@ -63,7 +63,15 @@ def getRightchildValue(root):
     return root[2]
 
 
+### Tree Traversal
 
+def preorder(tree):
+    if tree:
+        print(tree.getRootVal())
+        preorder(tree.getLeftChild())
+
+
+    
 # Example implementation
 r = BinaryTree(3)
 insertLeftChild(r,4)
