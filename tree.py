@@ -201,7 +201,26 @@ class BinHeap:
                 temp = self.heapList[]
                 self.heapList[i] = self.heapList[mc]
                 self.heapList[mc] = temp
-                
+            i = mc
+
+    def minChild(self, i):
+        if i * 2 + 1 > self.heapList:
+            return i * 2
+        else:
+            if self.heapList[i * 2] < self.heapList[i * 2 + 1]:
+                return i * 2
+            else:
+                i * 2 + 1
+    
+    def delMin(self):
+        retval = self.heapList[1]
+        self.heapList[1] = self.heapList[self.currentSize]
+        self.currentSize = self.currentSize - 1
+        self.heapList.pop()
+        self.percDown(1)
+        return retval
+        
+
 
 
 
