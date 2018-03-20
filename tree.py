@@ -193,7 +193,16 @@ class BinHeap:
     def insert(self, k):
         self.heapList.append(k)
         self.currentSize = self.currentSize + 1
-        
+
+    def percDown(self, i):
+        while (i * 2) <= self.currentSize:
+            mc = self.minChild(i)
+            if self.heapList[i] > self.heapList[mc]:
+                temp = self.heapList[]
+                self.heapList[i] = self.heapList[mc]
+                self.heapList[mc] = temp
+                
+
 
 
 if __name__ == '__main__':
