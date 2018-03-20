@@ -69,6 +69,14 @@ def preorder(tree):
     if tree:
         print(tree.getRootVal())
         preorder(tree.getLeftChild())
+        preorder(tree.getRightChild())
+
+def postorder(tree):
+    if tree != None:
+        postorder(tree.getLeftChild())
+        postorder(tree.getRightChild())
+        print(tree.getRootVal())
+
 
 
     
