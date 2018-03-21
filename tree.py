@@ -272,7 +272,18 @@ class TreeNode:
 
     def isRightChild(self):
         return self.parent and self.parent.rightChild == self
-        
+
+    def isRoot(self):
+        return not self.parent
+
+    def isLeaf(self):
+        return not (self.rightChild or self.leftChild)
+
+    def hasAnyChild(self):
+        return self.leftChild or self.rightChild
+
+    def hasBothChildren(self):
+        return self.leftChild and self.rightChild
 
 
 
