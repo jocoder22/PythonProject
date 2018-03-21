@@ -285,6 +285,18 @@ class TreeNode:
     def hasBothChildren(self):
         return self.leftChild and self.rightChild
 
+    def replaceNodeDate(self, key, value, leftChild, rightChild):
+        self.key = key
+        self.payload = value
+        self.leftChild = leftChild
+        self.rightChild = rightChild
+        if self.hasLeftChild():
+            self.leftChild.parent = self
+        if self.hasRightChild():
+            self.rightChild.parent = self
+
+            
+
 
 
 if __name__ == '__main__':
