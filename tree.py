@@ -361,7 +361,7 @@ class BinarySearchTree:
                 currentNode.parent.leftChild = None
             else:
                 currentNode.parent.isRightChild = None
-        elif:
+        elif currentNode.hasBothChildren():
             succ = currentNode.findSuccessor()
             succ.spliceOut()
             currentNode.key = succ.key
