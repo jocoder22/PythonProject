@@ -235,7 +235,7 @@ class BinHeap:
 ##*************************************###
 
 
-class BinarySearchTee:
+class BinarySearchTree:
 
     def __init__(self):
         self.root = None
@@ -250,7 +250,7 @@ class BinarySearchTee:
     def __iter__(self):
         return self.root.__iter__()
 
-        
+
 
 
 if __name__ == '__main__':
