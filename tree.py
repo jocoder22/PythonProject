@@ -474,25 +474,38 @@ class Node:
         self.left = None
         self.right = None
 
-
 tree_vals = []
 
 def inorder_tras(tree):
     if tree != None:
-        inorder_tras(BinaryTree.getLeftChild())
-        tree_vals.append(BinaryTree.getRootVal())
-        inorder_tras(BinaryTree.getRightChild())
+        inorder_tras(tree.getLeftChild())
+        tree_vals.append(tree.getRootVal())
+        inorder_tras(tree.getRightChild())
 
-def sort_check(tree_vals):
+def validate_BST(tree):
+    inorder_tras(tree)
     return tree_vals ==  sorted(tree_vals)
 
 
 
 
 
-root = Node(10, 'Hello')
-root.left = Node(5, 'Five')
-root.right = Node(30, 'Thirty')
+root = Binarytree(10)
+root.insertLeftChild(2)
+root.insertRightChild(18)
+root.rightchild.insertLeftChild(14)
+root.rightchild.insertRightChild(19)
+root.leftchild.insertLeftChild(1)
+root.leftchild.insertRightChild(5)
+
+
+root2 = Binarytree(10)
+root2.insertLeftChild(8)
+root2.insertRightChild(30)
+root2.rightchild.insertLeftChild(14)
+root2.rightchild.insertRightChild(19)
+root2.leftchild.insertLeftChild(1)
+root2.leftchild.insertRightChild(12)
 
 
 
