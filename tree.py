@@ -466,14 +466,6 @@ mytree[4] = 'blue'
 ## Solution 1: using tree traversal method
 ## Idea: Inorder traversal of the tree will produce a sorted list of values
 
-
-class Node:
-    def __init__(self, key, val):
-        self.key = key
-        self.value = val 
-        self.left = None
-        self.right = None
-
 tree_vals = []
 
 def inorder_tras(tree):
@@ -509,7 +501,47 @@ root2.leftchild.insertRightChild(12)
 
 
 
+## Solution 2
+## Tracking min and max values
 
+class Node:
+    def __init__(self, key, val):
+        self.key = key
+        self.value = val 
+        self.left = None
+        self.right = None
+
+def tree_max(node):
+    if not node:
+        return float('-inf')
+    maxleft = tree_max(node.left)
+    maxright = tree_max(node.right)
+    return max(node.key, maxleft, maxright)
+
+def tree_min(node):
+    if not node:
+        return float('inf')
+    minleft = tree_min(node.left)
+    minright = tree_min(node.right)
+    return min(node.key, minleft, minright)
+
+def verifytree(node):
+    if not node:
+        return True
+    if (tree_max(node.left) <= node.key <= tree_min(node.right) and
+        verifytree(node.left) and verifytree(node.right)):
+        return True
+    else:
+        return False
+
+root3 = Node(10, 'Hello')
+root3.left = Node(7, 'Seven')
+root3.right = Node(30, 'Thirty')
+
+root4 = Node(14, 'Hello')
+root4.left = Node(70, 'Seventy')
+root4.right = Node(30, 'Thirty')
+root4.left.left = Node(20, 'Twenty')
 
 
 
