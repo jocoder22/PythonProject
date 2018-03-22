@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from collections import deque
 import doctest
 '''
 python -i <file_name.py>
@@ -544,7 +545,40 @@ root4.right = Node(30, 'Thirty')
 root4.left.left = Node(20, 'Twenty')
 
 
+##***********************************##
+##    Print tree values              ##
+##***********************************##
 
+class MyNode:
+    def __init__(self, val=None):
+        self.val = val 
+        self.left = None
+        self.right = None
+
+
+def levelOrderPrint(tree):
+    if not tree:
+        return
+    nodes = deque([tree])
+    currentcount, nextcount = 1, 0
+    while len(nodes) != 0:
+        currentnode = nodes.popleft()
+        currentcount -= 1
+        print(currentnode.val,)
+        if currentnode.left:
+            nodes.append(currentnode.left)
+            nextcount += 1
+        if currentnode.right:
+            nodes.append(currentnode.right)
+            nextcount += 1
+        if currentcount == 0:
+            # print('\n')
+            currentcount, nextcount = nextcount, currentcount
+
+
+treeroot = MyNode(1)
+treeroot.left = MyNode(2)
+treeroot.right = MyNode(3)
 
 
 if __name__ == '__main__':
