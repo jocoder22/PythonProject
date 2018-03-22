@@ -402,7 +402,7 @@ class BinarySearchTree:
             if self.hasRightChild():
                 for elem in self.rightChild:
                     yield elem
-                    
+
 
 
 
@@ -453,6 +453,50 @@ class TreeNode:
 mytree = BinarySearchTree()
 mytree[3] = 'red'
 mytree[4] = 'blue'
+
+
+
+
+
+###*******************************************##
+###     Tree Questions                       ###
+###******************************************###
+
+### Validate BST
+## Solution 1: using tree traversal method
+## Idea: Inorder traversal of the tree will produce a sorted list of values
+
+
+class Node:
+    def __init__(self, key, val):
+        self.key = key
+        self.value = val 
+        self.left = None
+        self.right = None
+
+
+tree_vals = []
+
+def inorder_tras(tree):
+    if tree != None:
+        inorder_tras(BinaryTree.getLeftChild())
+        tree_vals.append(BinaryTree.getRootVal())
+        inorder_tras(BinaryTree.getRightChild())
+
+def sort_check(tree_vals):
+    return tree_vals ==  sorted(tree_vals)
+
+
+
+
+
+root = Node(10, 'Hello')
+root.left = Node(5, 'Five')
+root.right = Node(30, 'Thirty')
+
+
+
+
 
 
 
