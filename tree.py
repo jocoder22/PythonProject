@@ -576,7 +576,8 @@ def levelOrderPrint(tree):
             currentcount, nextcount = nextcount, currentcount
 
 
-treeroot = MyNode(1)
+treeroot = My
+Node(1)
 treeroot.left = MyNode(2)
 treeroot.right = MyNode(3)
 
