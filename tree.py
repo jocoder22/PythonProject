@@ -394,7 +394,15 @@ class BinarySearchTree:
                                                 currentNode.rightChild.rightChild)
 
     def __iter__(self):
-        return self.root.__iter__()
+        if self:
+            if self.hasLeftChild():
+                for elem in self.leftChild:
+                    yield elem
+            yield self.key
+            if self.hasRightChild():
+                for elem in self.rightChild:
+                    yield elem
+                    
 
 
 
@@ -440,6 +448,11 @@ class TreeNode:
             self.leftChild.parent = self
         if self.hasRightChild():
             self.rightChild.parent = self
+
+
+mytree = BinarySearchTree()
+mytree[3] = 'red'
+mytree[4] = 'blue'
 
 
 
