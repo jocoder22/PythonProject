@@ -582,5 +582,25 @@ treeroot.left = MyNode(2)
 treeroot.right = MyNode(3)
 
 
+# Binary Trim
+# Trim the tree between the min and max inclusive
+
+def trimBST(tree, minval, maxval):
+    if not tree:
+        return
+    
+    tree.left = trimBST(tree.left, minval, maxval)
+    tree.right = trimBST(tree.right, minval, maxval)
+
+    if minval <= tree.val <= maxval:
+        return tree
+
+    if tree.val < minval:
+        return tree.right
+
+    if tree.val > maxval:
+        return tree.left
+
+
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
