@@ -65,6 +65,18 @@ pattern_exclusion = '[^!.? ]+'
 print(re.findall(pattern_exclusion,text_exclusion))
 
 
+def regxx(expr, s):
+	ss = s.split()
+	if re.search(expr, s):
+		print(f'Some {expr} found in {s} :-)')
+		print(re.search(expr,s))
+	else:
+		print(f'No {expr} found :-)')
+
+### Any Character .
+expr1 = r' .at '
+s = 'cat and rat are have high rating at music education and communication'
+
 
 
 if __name__ == '__main__':
