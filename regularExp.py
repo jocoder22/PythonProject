@@ -66,7 +66,6 @@ print(re.findall(pattern_exclusion,text_exclusion))
 
 
 def regxx(expr, s):
-	ss = s.split()
 	if re.search(expr, s):
 		print(f'Some {expr} found in -- {s} -- :-)')
 		print(re.findall(expr,s))
@@ -74,8 +73,8 @@ def regxx(expr, s):
 		print(f'No {expr} found :-)')
 
 ### Any Character .
-expr1 = r' .at '
-s = 'cat and rat are have high rating at music education and communication'
+expr1 = r'.at'
+s = 'cat and rat are have high rat thing at music education and communication'
 
 
 
