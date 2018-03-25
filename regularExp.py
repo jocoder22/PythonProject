@@ -70,15 +70,16 @@ def regxx(expr, s):
 	This function use regular expressions.
 	 
 	Input: String
-	Output: String
+	Output: List
 	 
 	Test: 
-	>>> 
+	>>> ss = 'The cats are in the room with rat and cattle'
+	>>> regxx(r'cat', ss)
+	['cat', 'cat']
+	>>> regxx(r'cat.', ss)
 	 
-	>>> 
-	 
-	>>> 
-	 
+	>>> regxx(r'\b.at.\b',ss)
+	['cats', 'rat ']
 	'''
 	if re.search(expr, s):
 		print(f'Some {expr} found in -- {s} -- :-)')
