@@ -66,6 +66,20 @@ print(re.findall(pattern_exclusion,text_exclusion))
 
 
 def regxx(expr, s):
+	'''
+	This function use regular expressions.
+	 
+	Input: String
+	Output: String
+	 
+	Test: 
+	>>> 
+	 
+	>>> 
+	 
+	>>> 
+	 
+	'''
 	if re.search(expr, s):
 		print(f'Some {expr} found in -- {s} -- :-)')
 		print(re.findall(expr,s))
