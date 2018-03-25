@@ -82,7 +82,6 @@ def regxx(expr, s):
 	['cats', 'rat ']
 	'''
 	if re.search(expr, s):
-		print(f'Some {expr} found in -- {s} -- :-)')
 		print(re.findall(expr,s))
 	else:
 		print(f'No {expr} found :-)')
