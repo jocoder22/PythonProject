@@ -77,7 +77,7 @@ def regxx(expr, s):
 	>>> regxx(r'cat', ss)
 	['cat', 'cat']
 	>>> regxx(r'cat.', ss)
-	 
+	['cats', 'catt']
 	>>> regxx(r'\b.at.\b',ss)
 	['cats', 'rat ']
 	'''
