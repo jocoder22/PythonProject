@@ -7,6 +7,22 @@ and will monitor for code changes
 '''
 
 def seq_search(arr, ele):
+    '''
+    This function return true if ele is found in arr
+     
+    Input: List
+     
+    Output: Boolean
+     
+    Test:
+    >>> arr1 = [1, 3, 5, 6, 9]
+    >>> seq_search(arr1, 5)
+    True
+    >>> seq_search(arr1, 8)
+    False
+    >>> seq_search(arr1, 9)
+    True
+    '''
     pos = 0
     found = False
 
