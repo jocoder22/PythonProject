@@ -89,6 +89,7 @@ def regxx(expr, s):
 ### Any Character .
 expr1 = r'.at'
 expr2 = r'cat?'
+expr3 = r' cat '
 s = 'cat and rat are have high rat thing at music education and communication'
 s2 = 'There are many cats in the cattle catch roacat'
 
