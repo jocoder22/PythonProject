@@ -75,9 +75,10 @@ def sorted_seq_search(arr, ele):
 def binary_search(arr, ele):
     # first and last index values
     first = 0
-    last = len(arr)
+    last = len(arr) - 1
 
     found = False
+    arr.sort()
 
     while first <= last and not found:
         mid = (first + last) // 2 
@@ -87,7 +88,14 @@ def binary_search(arr, ele):
             found = True
 
         # set new midpoint up or down depending on comparison
-        
+        else:
+            if ele < arr[mid]:
+                last = mid - 1
+
+            else:
+                first = mid + 1
+
+    return found
 
 
 if __name__ == '__main__':
