@@ -73,6 +73,22 @@ def sorted_seq_search(arr, ele):
 
 
 def binary_search(arr, ele):
+    '''
+    This function do a binary search 
+     
+    Input: List
+     
+    Output: Boolean
+     
+    Test:
+    >>> blist = [9,4,8,2,5,7,34,22,18]
+    >>> binary_search(blist, 34)
+    True
+    >>> binary_search(blist, 39)
+    False
+    >>> binary_search(blist, 2)
+    True
+    '''
     # first and last index values
     first = 0
     last = len(arr) - 1
