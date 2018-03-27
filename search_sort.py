@@ -116,6 +116,26 @@ def binary_search(arr, ele):
 
 
 def recursive_binarysearch(arr, ele):
+    '''
+    This function perform a recursive implementation of binary search
+     
+    Input: List
+     
+    Output: Boolean
+     
+    Test:
+    >>> list2 = [9,4,8,2,5,7,34,22,18]
+    >>> recursive_binarysearch(list2, 49)
+    False
+    >>> recursive_binarysearch(list2, 1)
+    False
+    >>> recursive_binarysearch(list2, 22)
+    True
+    >>> recursive_binarysearch(list2, 4)
+    True
+    '''
+    arr.sort()
+
     if len(arr) = 0:
         return False
     else:
