@@ -71,5 +71,24 @@ def sorted_seq_search(arr, ele):
     return found
 
 
+
+def binary_search(arr, ele):
+    # first and last index values
+    first = 0
+    last = len(arr)
+
+    found = False
+
+    while first <= last and not found:
+        mid = (first + last) // 2 
+
+        # match found
+        if arr[mid] == ele:
+            found = True
+
+        # set new midpoint up or down depending on comparison
+        
+
+
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
