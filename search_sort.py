@@ -114,5 +114,22 @@ def binary_search(arr, ele):
     return found
 
 
+
+def recursive_binarysearch(arr, ele):
+    if len(arr) = 0:
+        return False
+    else:
+        mid = len(arr) // 2
+
+        if arr[mid] == ele:
+            return True
+
+        else:
+            if ele < arr[mid]:
+                return recursive_binarysearch(arr[:mid], ele)
+            else:
+                return recursive_binarysearch(arr[mid + 1:], ele)
+
+
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
