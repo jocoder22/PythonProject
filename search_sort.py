@@ -136,7 +136,7 @@ def recursive_binarysearch(arr, ele):
     '''
     arr.sort()
 
-    if len(arr) = 0:
+    if len(arr) == 0:
         return False
     else:
         mid = len(arr) // 2
