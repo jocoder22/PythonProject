@@ -151,5 +151,7 @@ def recursive_binarysearch(arr, ele):
                 return recursive_binarysearch(arr[mid + 1:], ele)
 
 
+
+
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
