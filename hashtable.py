@@ -9,7 +9,7 @@ and will monitor for code changes
 
 class HashTable(object):
     '''
-    This function implement hash table in python
+    This function implement hash table in python using remainder method
      
     Input: Strings, Number
      
