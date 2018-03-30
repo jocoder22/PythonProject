@@ -95,6 +95,11 @@ s2 = 'There are many cats in the cattle catch roacat'
 s3 = 'In the end cat and rat are catching fire'
 
 
+
+## using logical 'OR' operator, |
+mm = 'January February March April May June July August September October November December'
+mbermonth = re.findall(r"\w*mber|\w*uary",mm)
+
 if __name__ == '__main__':
     import doctest
     doctest.testmod(verbose=True)
