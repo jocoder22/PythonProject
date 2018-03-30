@@ -8,6 +8,21 @@ and will monitor for code changes
 
 
 class HashTable(object):
+    '''
+    This function implement hash table in python
+     
+    Input: Strings, Number
+     
+    Output: Hash Table
+     
+    Test:
+    >>> 
+     
+    >>> 
+     
+    >>> 
+     
+    '''
 
     def __init__(self, size):
 
