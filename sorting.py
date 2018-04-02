@@ -30,9 +30,8 @@ def bubble_sort(arr):
         # the point to swtich
         for k in range(n):
             if arr[k] > arr[k +1]:
-                temp = arr[k]
-                arr[k] = arr[k+1]
-                arr[k+1] = temp
+                arr[k], arr[k+1] = arr[k+1], arr[k]
+
 
 
 if __name__ == '__main__':
