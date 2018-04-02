@@ -32,6 +32,29 @@ def bubble_sort(arr):
             if arr[k] > arr[k +1]:
                 arr[k], arr[k+1] = arr[k+1], arr[k]
 
+def bubble_sort2(arr):
+    '''
+    This function performs bubble sort method
+     
+    Input: List
+     
+    Output: List
+     
+    Test:
+    >>> arr = [5,3,8,4,5,90,23,14,2]
+    >>> arr2 = [15,3,18,4,50,23,14,20]
+    >>> bubble_sort2(arr2)
+    >>> bubble_sort2(arr)
+    >>> arr
+    [2, 3, 4, 5, 5, 8, 14, 23, 90]
+    >>> arr2
+    [3, 4, 14, 15, 18, 20, 23, 50]
+    '''
+    # for every element in the list
+    for n in range(len(arr)):
+        for k in range(0,len(arr)-n-1):
+            if arr[k] > arr[k +1]:
+                arr[k], arr[k+1] = arr[k+1], arr[k]
 
 
 if __name__ == '__main__':
