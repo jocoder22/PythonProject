@@ -17,13 +17,13 @@ def bubble_sort(arr):
      
     Test:
     >>> arr = [5,3,8,4,5,90,23,14,2]
-    >>> arr2 = [15,3,18,4,5,90,23,14,20]
+    >>> arr2 = [15,3,18,4,50,23,14,20]
     >>> bubble_sort(arr2)
     >>> bubble_sort(arr)
     >>> arr
-     
+    [2, 3, 4, 5, 5, 8, 14, 23, 90]
     >>> arr2
-     
+    [3, 4, 14, 15, 18, 20, 23, 50]
     '''
     # for every element arranged backward
     for n in range(len(arr)-1,0,-1):
