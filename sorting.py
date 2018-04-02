@@ -1,6 +1,8 @@
 
 #!/usr/bin/env python
-import doctest
+import doctest, timeit
+from random import *
+
 '''
 python -i <file_name.py>
 The above will keep your session running
@@ -55,6 +57,44 @@ def bubble_sort2(arr):
         for k in range(0,len(arr)-n-1):
             if arr[k] > arr[k +1]:
                 arr[k], arr[k+1] = arr[k+1], arr[k]
+
+
+
+setupme = "from random import shuffle"
+
+thecode = '''
+ku = shuffle([x for x in range(1000)])
+def bubble_sort2(ku):
+    # for every element in the list
+    for n in range(len(arr)):
+        for k in range(0,len(arr)-n-1):
+            if arr[k] > arr[k +1]:
+                arr[k], arr[k+1] = arr[k+1], arr[k]
+'''
+
+print(timeit.timeit(setup = setupme,
+                    stmt = thecode,
+                    number = 10000))
+
+
+setupme = "from random import shuffle"
+
+thecode = '''
+ku = shuffle([x for x in range(1000)])
+def bubble_sort(ku):
+   for n in range(len(arr)-1,0,-1):
+        # the point to swtich
+        for k in range(n):
+            if arr[k] > arr[k +1]:
+                arr[k], arr[k+1] = arr[k+1], arr[k]
+
+'''
+
+print(timeit.timeit(setup = setupme,
+                    stmt = thecode,
+                    number = 10000))
+
+
 
 
 if __name__ == '__main__':
