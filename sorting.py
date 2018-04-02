@@ -8,6 +8,23 @@ and will monitor for code changes
 '''
 
 def bubble_sort(arr):
+    '''
+    This function performs bubble sort method
+     
+    Input: List
+     
+    Output: List
+     
+    Test:
+    >>> arr = [5,3,8,4,5,90,23,14,2]
+    >>> arr2 = [15,3,18,4,5,90,23,14,20]
+    >>> bubble_sort(arr2)
+    >>> bubble_sort(arr)
+    >>> arr
+     
+    >>> arr2
+     
+    '''
     # for every element arranged backward
     for n in range(len(arr)-1,0,-1):
         # the point to swtich
