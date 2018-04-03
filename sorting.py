@@ -95,7 +95,41 @@ print(timeit.timeit(setup = setupme,
                     number = 10000))
 
 
+def Time_function():
+
+    SETUP_CODE = '''
+    from __main__ import bubble_sort, bubble_sort2
+    '''
+ 
+    TEST_CODE = '''
+    ku = shuffle([x for x in range(1000)])
+    bubble_sort(ku)
+    '''
+
+    TEST_CODE2 = '''
+    ku = shuffle([x for x in range(1000)])
+    bubble_sort2(ku)
+    '''
+                
+    # timeit.repeat statement
+    times = timeit.repeat(setup = SETUP_CODE,
+                          stmt = TEST_CODE,
+                          repeat = 3,
+                          number = 10000)
+    
+    times2 = timeit.repeat(setup = SETUP_CODE,
+                        stmt = TEST_CODE2,
+                        repeat = 3,
+                        number = 10000)
+ 
+    # priniting minimum exec. time
+    print('Bubble sort  time: {}'.format(min(times))) 
+    print('Bubble sort2  time: {}'.format(min(times2)))         
+ 
+
 
 
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
+    Time_function()
+ 
