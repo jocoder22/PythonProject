@@ -27,6 +27,7 @@ def bubble_sort(arr):
     >>> arr2
     [3, 4, 14, 15, 18, 20, 23, 50]
     '''
+
     # for every element arranged backward
     for n in range(len(arr)-1,0,-1):
         # the point to swtich
@@ -77,7 +78,6 @@ print(timeit.timeit(setup = setupme,
                     number = 10000))
 
 
-setupme = "from random import shuffle"
 
 thecode = '''
 ku = shuffle([x for x in range(1000)])
@@ -98,33 +98,35 @@ print(timeit.timeit(setup = setupme,
 def Time_function():
 
     SETUP_CODE = '''
-    from __main__ import bubble_sort, bubble_sort2
-    '''
+from __main__ import bubble_sort, bubble_sort2
+from random import shuffle'''
  
     TEST_CODE = '''
-    ku = shuffle([x for x in range(1000)])
-    bubble_sort(ku)
-    '''
+ku = [x for x in range(100)]
+shuffle(ku)
+bubble_sort(ku)
+'''
 
     TEST_CODE2 = '''
-    ku = shuffle([x for x in range(1000)])
-    bubble_sort2(ku)
-    '''
+ku = [x for x in range(100)]
+shuffle(ku)
+bubble_sort2(ku)
+'''
                 
     # timeit.repeat statement
     times = timeit.repeat(setup = SETUP_CODE,
                           stmt = TEST_CODE,
                           repeat = 3,
-                          number = 10000)
+                          number = 100)
     
     times2 = timeit.repeat(setup = SETUP_CODE,
                         stmt = TEST_CODE2,
                         repeat = 3,
-                        number = 10000)
+                        number = 100)
  
     # priniting minimum exec. time
-    print('Bubble sort  time: {}'.format(min(times))) 
-    print('Bubble sort2  time: {}'.format(min(times2)))         
+    print('Bubble sort  time: {}'.format(min(times)))
+    print('Bubble sort2  time: {}'.format(min(times2)))
  
 
 
