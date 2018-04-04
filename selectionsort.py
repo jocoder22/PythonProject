@@ -90,15 +90,34 @@ def insertion_sort(arr):
 
         arr[position] = currentvalue
 
+
+
 def shell_sort(arr):
-    sublistcount = len(arr)/2
+    '''
+    This function performs shell sort  method
+     
+    Input: List
+     
+    Output: List
+     
+    Test:
+    >>> arr = [5,3,8,4,5,90,23,14,2]
+    >>> arr2 = [15,3,18,4,50,23,14,20]
+    >>> shell_sort(arr2)
+    >>> shell_sort(arr)
+    >>> arr
+    [2, 3, 4, 5, 5, 8, 14, 23, 90]
+    >>> arr2
+    [3, 4, 14, 15, 18, 20, 23, 50]
+    '''
+    sublistcount = len(arr)//2
 
     while sublistcount > 0:
         for start in range(sublistcount):
 
             gap_insertion(arr, start, sublistcount)
         
-        sublistcount = sublistcount/2
+        sublistcount = sublistcount//2
 
 
 
@@ -107,7 +126,7 @@ def gap_insertion(arr, start, gap):
         currentvalue = arr[i]
         position = i
 
-        while position >= gap and arr[position -gap] > currentvalue:
+        while position >= gap and arr[position-gap] > currentvalue:
             arr[position], position = arr[position-gap], position-gap
 
         arr[position] = currentvalue
