@@ -64,6 +64,23 @@ def selection_sort(arr):
 
 
 def insertion_sort(arr):
+    '''
+    This function performs insertion sort  method
+     
+    Input: List
+     
+    Output: List
+     
+    Test:
+    >>> arr = [5,3,8,4,5,90,23,14,2]
+    >>> arr2 = [15,3,18,4,50,23,14,20]
+    >>> insertion_sort(arr2)
+    >>> insertion_sort(arr)
+    >>> arr
+    [2, 3, 4, 5, 5, 8, 14, 23, 90]
+    >>> arr2
+    [3, 4, 14, 15, 18, 20, 23, 50]
+    '''
     for i in range(1, len(arr)):
         currentvalue = arr[i]
         position = i
