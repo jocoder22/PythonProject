@@ -90,6 +90,28 @@ def insertion_sort(arr):
 
         arr[position] = currentvalue
 
+def shell_sort(arr):
+    sublistcount = len(arr)/2
+
+    while sublistcount > 0:
+        for start in range(sublistcount):
+
+            gap_insertion(arr, start, sublistcount)
+        
+        sublistcount = sublistcount/2
+
+
+
+def gap_insertion(arr, start, gap):
+    for i in range(start+gap, len(arr), gap):
+        currentvalue = arr[i]
+        position = i
+
+        while position >= gap and arr[position -gap] > currentvalue:
+            arr[position], position = arr[position-gap], position-gap
+
+        arr[position] = currentvalue
+
 
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
