@@ -34,7 +34,7 @@ def selection_sort(arr):
         
         arr[slot], arr[maxp] = arr[maxp], arr[slot]
 
-def selection_sort(arr):
+def selection_sort_desc(arr):
     '''
     This function performs selection sort descending method
      
@@ -85,7 +85,7 @@ def insertion_sort(arr):
         currentvalue = arr[i]
         position = i
 
-        while position > 0 and arr[position] > arr[position -1]:
+        while position > 0 and arr[position -1] > currentvalue:
             arr[position], position = arr[position -1], position - 1
 
         arr[position] = currentvalue
