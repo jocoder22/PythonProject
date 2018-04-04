@@ -63,5 +63,16 @@ def selection_sort(arr):
         arr[slot], arr[maxp] = arr[maxp], arr[slot]
 
 
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        currentvalue = arr[i]
+        position = i
+
+        while position > 0 and arr[position] > arr[position -1]:
+            arr[position], position = arr[position -1], position - 1
+
+        arr[position] = currentvalue
+
+
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
