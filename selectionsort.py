@@ -117,7 +117,7 @@ def shell_sort(arr):
 
             gap_insertion(arr, start, sublistcount)
         
-        sublistcount = sublistcount//2
+        sublistcount = sublistcount/2
 
 
 
