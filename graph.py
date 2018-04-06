@@ -29,8 +29,7 @@ class Vertex:
         return self.connectedTo[nbr]
 
     def __str__(self):
-        return str(self, id) + " connected to: " +\
-         str([x.id for x in self.connectedTo])
+        return str(self.id) + " connected to: " + str([x.id for x in self.connectedTo])
 
 
 class Graph:
@@ -60,7 +59,7 @@ class Graph:
         if vto not in self.vertList:
             nv = self.addVertex(vto)
 
-        self.vertList(vfrom).addNeighbor(self.vertList[vto], weight)
+        self.vertList[vfrom].addNeighbor(self.vertList[vto], weight)
 
     def __iter__(self):
         return iter(self.vertList.values())
