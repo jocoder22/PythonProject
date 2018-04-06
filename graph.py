@@ -13,7 +13,7 @@ class Vertex:
     '''
 
     def __init__(self, key):
-        self.id = id
+        self.id = key
         self.connectedTo = {}
 
     def addNeighbor(self, nbr, weight=0):
@@ -29,7 +29,10 @@ class Vertex:
         return self.connectedTo[nbr]
 
     def __str__(self):
-        return str(self.id) + " connected to: " + str([x.id for x in self.connectedTo])
+        return str(self.id) + " connected to: " + str(
+            [x.id for x in self.connectedTo])
+        # return "{} connected to: {}".format(self.id,
+        #                                    [x.id for x in self.connectedTo])
 
 
 class Graph:
@@ -55,9 +58,9 @@ class Graph:
 
     def addEdge(self, vfrom, vto, weight=0):
         if vfrom not in self.vertList:
-            nv = self.addVertex(vfrom)
+            self.addVertex(vfrom)
         if vto not in self.vertList:
-            nv = self.addVertex(vto)
+            self.addVertex(vto)
 
         self.vertList[vfrom].addNeighbor(self.vertList[vto], weight)
 
@@ -67,6 +70,20 @@ class Graph:
     def __contains__(self, n):
         return n in self.vertList
 
+
+g = Graph()
+for i in range(6):
+    g.addVertex(i)
+
+g.addEdge(0, 1, 7)
+g.addEdge(0, 2, 12)
+g.addEdge(1, 2, 10)
+g.addEdge(1, 3, 9)
+g.addEdge(2, 4, 35)
+for vertex in g:
+    print(vertex)
+    print(vertex.getConnections())
+    print('\n')
 
 if __name__ == '__main__':
     doctest.testmod(verbose=True)
