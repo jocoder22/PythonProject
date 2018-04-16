@@ -7,23 +7,23 @@ The above will keep your session running
 and will monitor for code changes
 '''
 
-##**************************************####
-##    LIST IMPLEMENTATION OF TREE        ###
-##                                       ###
-############################################
+# #**************************************####
+# #    LIST IMPLEMENTATION OF TREE        ###
+# #                                       ###
+# ###########################################
 # Tree Implementation as list of lists   ###
 
 
-MyTree = ['a', # root                                        [a]
-           ['b',   # left subtree                           /   \
-            ['d', [], []],          #                      /     \
-            ['e', [], []]          #                      /       \
-           ],                       #                   [b]       [c]
-           ['c',   # right subtree                     /   \       |
-            ['f', [], []], #                          /     \      |
-            []                     #                [e]     [d]   [f]
+MyTree = ['a',          # root                               [a]
+          ['b',   # left subtree                            /   \
+           ['d', [], []],          # b                     /     \
+           ['e', [], []]          # b                     /       \
+           ],                       # b                 [b]       [c]
+          ['c',   # right subtree                      /   \       |
+           ['f', [], []],         # b                 /     \      |
+           []                     # b               [e]     [d]   [f]
            ]
-         ]
+          ]
 
 
 def BinaryTree(r):
@@ -34,9 +34,9 @@ def insertLeftChild(root, newbranch):
     t = root.pop(1)
 
     if len(t) > 1:
-        root.insert(1, [newbranch,t,[]])
+        root.insert(1, [newbranch, t, []])
     else:
-        root.insert(1,[newbranch,[],[]])
+        root.insert(1, [newbranch, [], []])
     return root
 
 
@@ -44,14 +44,15 @@ def insertRightChild(root, newbranch):
     t = root.pop(2)
 
     if len(t) > 1:
-        root.insert(2, [newbranch,[],t])
+        root.insert(2, [newbranch, [], t])
     else:
-        root.insert(2,[newbranch,[],[]])
+        root.insert(2, [newbranch, [], []])
     return root
 
 
 def getRootVal(root):
     return root[0]
+
 
 def setRootVal(root, newval):
     return root[0] == root(newval)
@@ -60,11 +61,13 @@ def setRootVal(root, newval):
 def getLeftchildValue(root):
     return root[1]
 
+
 def getRightchildValue(root):
     return root[2]
 
 
-### Tree Traversal
+# ## Tree Traversal
+
 
 def preorder(tree):
     if tree:
@@ -72,33 +75,31 @@ def preorder(tree):
         preorder(tree.getLeftChild())
         preorder(tree.getRightChild())
 
+
 def inorder(tree):
-    if tree != None:
+    if tree is not None:
         inorder(tree.getLeftChild())
         print(tree.getRootVal())
         inorder(tree.getRightChild())
 
+
 def postorder(tree):
-    if tree != None:
+    if tree is not None:
         postorder(tree.getLeftChild())
         postorder(tree.getRightChild())
         print(tree.getRootVal())
 
 
-        
-
-    
 # Example implementation
 r = BinaryTree(3)
-insertLeftChild(r,4)
+insertLeftChild(r, 4)
 insertRightChild(r, 5)
 
 
-
-##**************************************####
-##   OBJECT ORIENTATION PARADIGM         ###
-##     IMPLEMENTATION OF TREE            ###
-############################################
+# #**************************************####
+# #   OBJECT ORIENTATION PARADIGM         ###
+# #     IMPLEMENTATION OF TREE            ###
+# ###########################################
 # Tree Implementation as class object    ###
 
 
@@ -109,9 +110,8 @@ class Binarytree(object):
         self.leftchild = None
         self.rightchild = None
 
-
     def insertLeftChild(self, newnode):
-        if self.leftchild == None:
+        if self.leftchild is None:
             self.leftchild = Binarytree(newnode)
         else:
             t = Binarytree(newnode)
@@ -119,7 +119,7 @@ class Binarytree(object):
             self.leftchild = t
 
     def insertRightChild(self, newnode):
-        if self.rightchild == None:
+        if self.rightchild is None:
             self.rightchild = Binarytree(newnode)
         else:
             t = Binarytree(newnode)
@@ -160,8 +160,6 @@ class Binarytree(object):
         print(self.key)
 
 
-        
-
 r = Binarytree('b')
 r.getRootVal()
 r.insertLeftChild('b-left')
@@ -171,8 +169,6 @@ r.insertRightChild('b-right')
 tRight = r.rightchild
 tRight.insertLeftChild('b-right-left')
 r.getRightChild().getRootVal()
-
-
 
 
 class BinHeap:
@@ -228,12 +224,9 @@ class BinHeap:
             i = i - 1
 
 
-
-
-
-##*************************************###
-##  Binary Search Implementation       ###
-##*************************************###
+# #*************************************###
+# #  Binary Search Implementation       ###
+# #*************************************###
 
 
 class BinarySearchTree:
@@ -368,7 +361,7 @@ class BinarySearchTree:
             currentNode.key = succ.key
             currentNode.payload = succ.payload
 
-        else: # node has one child
+        else:  # node has one child
             if currentNode.hasLeftChild():
                 if currentNode.isLeftChild():
                     currentNode.leftChild.parent = currentNode.parent
@@ -379,8 +372,10 @@ class BinarySearchTree:
                 else:
                     currentNode.replaceNodeDate(currentNode.leftChild.key,
                                                 currentNode.leftChild.payload,
-                                                currentNode.leftChild.leftChild,
-                                                currentNode.leftChild.rightChild)
+                                                currentNode.leftChild.
+                                                leftChild,
+                                                currentNode.leftChild.
+                                                rightChild)
             else:
                 if currentNode.isLeftChild():
                     currentNode.isRightChild.parent = currentNode.parent
@@ -391,8 +386,10 @@ class BinarySearchTree:
                 else:
                     currentNode.replaceNodeDate(currentNode.rightChild.key,
                                                 currentNode.rightChild.payload,
-                                                currentNode.rightChild.leftChild,
-                                                currentNode.rightChild.rightChild)
+                                                currentNode.rightChild.
+                                                leftChild,
+                                                currentNode.rightChild.
+                                                rightChild)
 
     def __iter__(self):
         if self:
@@ -403,8 +400,6 @@ class BinarySearchTree:
             if self.hasRightChild():
                 for elem in self.rightChild:
                     yield elem
-
-
 
 
 class TreeNode:
@@ -456,31 +451,27 @@ mytree[3] = 'red'
 mytree[4] = 'blue'
 
 
+# ##*******************************************##
+# ##     Tree Questions                       ###
+# ##******************************************###
 
-
-
-###*******************************************##
-###     Tree Questions                       ###
-###******************************************###
-
-### Validate BST
-## Solution 1: using tree traversal method
-## Idea: Inorder traversal of the tree will produce a sorted list of values
+# ## Validate BST
+# # Solution 1: using tree traversal method
+# # Idea: Inorder traversal of the tree will produce a sorted list of values
 
 tree_vals = []
 
+
 def inorder_tras(tree):
-    if tree != None:
+    if tree is not None:
         inorder_tras(tree.getLeftChild())
         tree_vals.append(tree.getRootVal())
         inorder_tras(tree.getRightChild())
 
+
 def validate_BST(tree):
     inorder_tras(tree)
-    return tree_vals ==  sorted(tree_vals)
-
-
-
+    return tree_vals == sorted(tree_vals)
 
 
 root = Binarytree(10)
@@ -501,9 +492,9 @@ root2.leftchild.insertLeftChild(1)
 root2.leftchild.insertRightChild(12)
 
 
+# Solution 2
+# Tracking min and max values
 
-## Solution 2
-## Tracking min and max values
 
 class Node:
     def __init__(self, key, val):
@@ -512,12 +503,14 @@ class Node:
         self.left = None
         self.right = None
 
+
 def tree_max(node):
     if not node:
         return float('-inf')
     maxleft = tree_max(node.left)
     maxright = tree_max(node.right)
     return max(node.key, maxleft, maxright)
+
 
 def tree_min(node):
     if not node:
@@ -526,14 +519,16 @@ def tree_min(node):
     minright = tree_min(node.right)
     return min(node.key, minleft, minright)
 
+
 def verifytree(node):
     if not node:
         return True
     if (tree_max(node.left) <= node.key <= tree_min(node.right) and
-        verifytree(node.left) and verifytree(node.right)):
+       verifytree(node.left) and verifytree(node.right)):
         return True
     else:
         return False
+
 
 root3 = Node(10, 'Hello')
 root3.left = Node(7, 'Seven')
@@ -545,9 +540,9 @@ root4.right = Node(30, 'Thirty')
 root4.left.left = Node(20, 'Twenty')
 
 
-##***********************************##
-##    Print tree values              ##
-##***********************************##
+# ***********************************##
+#    Print tree values              ##
+# ***********************************##
 
 class MyNode:
     def __init__(self, val=None):
@@ -576,7 +571,7 @@ def levelOrderPrint(tree):
             currentcount, nextcount = nextcount, currentcount
 
 
-treeroot = My
+treeroot = MyNode(1)
 Node(1)
 treeroot.left = MyNode(2)
 treeroot.right = MyNode(3)
