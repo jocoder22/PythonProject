@@ -33,7 +33,7 @@ class HashTable(object):
     def put(self, key, data):
         hashvalue = self.hashfunction(key, len(self.slots))
 
-        if self.slots[hashvalue] == None:
+        if self.slots[hashvalue] is None:
             self.slots[hashvalue] = key
             self.data[hashvalue] = data
 
@@ -44,10 +44,11 @@ class HashTable(object):
             else:
                 nextslot = self.rehash(hashvalue, len(self.slots))
 
-                while self.slots[nextslot] != None and self.slots[nextslot] != key:
+                while self.slots[nextslot] is not None and \
+                        self.slots[nextslot] != key:
                     nextslot = self.rehash(nextslot, len(self.slots))
 
-                if self.slots[nextslot] == None:
+                if self.slots[nextslot] is None:
                     self.slots[nextslot] = key
                     self.data[nextslot] = data
 
@@ -55,7 +56,7 @@ class HashTable(object):
                     self.data[nextslot] = data
 
     def hashfunction(self, key, size):
-        return key%size
+        return key % size
 
     def rehash(self, oldhash, size):
         return (oldhash + 1) % size
@@ -67,15 +68,16 @@ class HashTable(object):
         found = False
         position = startslot
 
-        while self.slots[position] != None and not found:
+        while self.slots[position] is not None and not found:
             if self.slots[position] == key:
                 found = True
                 data = self.data[position]
 
             else:
                 position = self.rehash(position, len(self.slots))
-                if position = startslot:
+                if position == startslot:
                     stop = True
+
         return data
 
     def __getitem__(self, key):
@@ -85,5 +87,5 @@ class HashTable(object):
         self.put(key, data)
 
 
-
 if __name__ == '__main__':
+    doctest.testmod(verbose=True)

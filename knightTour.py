@@ -28,4 +28,10 @@ def genLegalMoves(x, y, bdsize):
         if legalCoord(newX, bdsize) and legalCoord(newY, bdsize):
             newMoves.append((newX, newY))
     return newMoves
-    
+
+
+def legalCoord(x, bdsize):
+    if x >= 0 and x < bdsize:
+        return True
+    else:
+        return False
