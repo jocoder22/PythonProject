@@ -76,7 +76,7 @@ class HashTable(object):
             else:
                 position = self.rehash(position, len(self.slots))
                 if position == startslot:
-                    stop = True
+                    stop     # can use stop = True
 
         return data
 
