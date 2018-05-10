@@ -6,6 +6,7 @@ The above will keep your session running
 and will monitor for code changes
 '''
 
+
 def merge_sort(arr):
     '''
     This function performs merge sort  method
@@ -26,14 +27,14 @@ def merge_sort(arr):
     '''
 
     if len(arr) > 1:
-        midd= len(arr)//2
+        midd = len(arr)//2
         lefthalf = arr[:midd]
         righthalf = arr[midd:]
 
         merge_sort(lefthalf)
         merge_sort(righthalf)
 
-        i,j,k = 0,0,0
+        i, j, k = 0, 0, 0
 
         while i < len(lefthalf) and j < len(righthalf):
             if lefthalf[i] < righthalf[j]:
@@ -46,14 +47,13 @@ def merge_sort(arr):
 
         while i < len(lefthalf):
             arr[k] = lefthalf[i]
-            i,k = i + 1, k + 1
+            i, k = i + 1, k + 1
 
         while j < len(righthalf):
             arr[k] = righthalf[j]
             j, k = j + 1, k + 1
 
     # print("Merging ", arr)
-
 
 
 def quick_sort(arr):
@@ -77,12 +77,14 @@ def quick_sort(arr):
 
     quick_help(arr, 0, len(arr) - 1)
 
+
 def quick_help(arr, first, last):
     if first < last:
         splitpoint = partition(arr, first, last)
 
         quick_help(arr, first, splitpoint-1)
         quick_help(arr, splitpoint+1, last)
+
 
 def partition(arr, first, last):
     pivotvalue = arr[first]
