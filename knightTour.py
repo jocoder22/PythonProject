@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from Graph import Graph
 
 
 def KnightGraph(bdsize):
