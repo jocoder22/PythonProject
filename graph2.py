@@ -40,4 +40,6 @@ class Graph:
         self.nodes[source].adjacent[self.nodes[dest]] = weight
 
 
-
+g = Graph()
+g.add_edge(0, 1, 5)
+g.nodes
