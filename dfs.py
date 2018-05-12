@@ -12,10 +12,10 @@ graph = {'A' : set(['B', 'C']),
 graph2 = {'A' : set(['B', 'C']),
          'B' : set(['A', 'D', 'E']),
          'C' : set(['A', 'F']),
-         'D' : set(['P']),
+         'D' : set(['F', 'G']),
          'E' : set(['B', 'F']),
          'F' : set(['C', 'E']),
-         'G' : set(['k','L'])}
+         'G' : set(['D','F'])}
 
 
 
@@ -43,5 +43,22 @@ def dfsearch2(graph, start, visited=None):
         dfsearch2(graph, nxt, visited)
     
     return visited
+
+
+def dfs_path(graph, start, goal):
+    stack = [(start, [start])]
+
+    while stack:
+        (vertex, path) = stack.pop()
+
+        for nxt in graph[vertex] - set(path):
+            if nxt == goal:
+                yield path + [nxt]
+            else:
+                stack.append((nxt, path + [nxt]))
+
+dfs_path(graph, 'A', 'F')
+
+
 
         
