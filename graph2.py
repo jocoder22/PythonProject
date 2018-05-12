@@ -4,7 +4,7 @@ from enum import Enum
 from collections import OrderedDict
 
 
-class State(Enum):
+class State(Enum):  # Enum State.unvisited has name: univisited and value: 1 
     unvisited = 1  # White
     visited = 2  # Black
     visiting = 3  # Gray
