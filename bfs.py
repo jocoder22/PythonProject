@@ -1,5 +1,21 @@
 #!/usr/bin/env python
 
+graph = {'A' : set(['B', 'C']),
+         'B' : set(['A', 'D', 'E']),
+         'C' : set(['A', 'F']),
+         'D' : set(['B']),
+         'E' : set(['B', 'F']),
+         'F' : set(['C', 'E'])}
+
+graph2 = {'A' : set(['B', 'C']),
+         'B' : set(['A', 'D', 'E']),
+         'C' : set(['A', 'F']),
+         'D' : set(['F', 'G']),
+         'E' : set(['B', 'F']),
+         'F' : set(['C', 'E']),
+         'G' : set(['D','F'])}
+
+
 def bfsearch(graph, start):
     visited, queue = set(), [start]
 
@@ -31,3 +47,8 @@ def shortest_path(graph, start, goal):
         return next(bfs_path(graph, start, goal))
     except StopIteration:
         return None
+
+
+# test cases
+bfsearch(graph, 'A')
+bfsearch(graph2, 'G')
