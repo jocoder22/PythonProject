@@ -16,10 +16,11 @@ graph2 = {'A' : set(['B', 'C']),
          'G' : set(['D','F'])}
 
 
-travel = {'New York' : set(['Baltimore','Newark','Dallars', 'Houston']),
-          'Baltimore' : set(['Orlando', 'Newark']),
-          'Newark' : set(['Orlando', 'Atlanta', 'New York']),
-          'Dallars' : set(['Newark', 'Atlanta', 'Houston']),
+# Here cities are arranged in increasing distance from the originating city
+travel = {'New York' : set(['Newark', 'Baltimore','Dallars', 'Houston']),
+          'Baltimore' : set(['Newark', 'Orlando']),
+          'Newark' : set(['New York', 'Orlando', 'Atlanta']),
+          'Dallars' : set(['Houston', 'Atlanta' , 'Newark']),
           'Houston' : set(['New York']),
           'Orlando' : set(['New York', 'Atlanta']),
           'Atlanta' : set(['Baltimore', 'Houston'])}
@@ -64,3 +65,10 @@ bfsearch(graph2, 'G')
 
 list(bfs_path(graph, 'A', 'F'))
 list(bfs_path(graph2, 'C', 'G'))
+
+list(bfs_path(travel, 'New York', 'Atlanta'))
+list(bfs_path(travel, 'Atlanta', 'New York'))
+
+shortest_path(travel, 'Baltimore', 'Houston')
+shortest_path(travel, 'Atlanta', 'New York')
+
