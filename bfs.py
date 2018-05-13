@@ -52,3 +52,6 @@ def shortest_path(graph, start, goal):
 # test cases
 bfsearch(graph, 'A')
 bfsearch(graph2, 'G')
+
+list(bfs_path(graph, 'A', 'F'))
+list(bfs_path(graph2, 'C', 'G'))
