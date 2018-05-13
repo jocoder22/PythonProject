@@ -24,3 +24,10 @@ def bfs_path(graph, start, goal):
                 yield path + [nxt]
             else:
                 queue.append((nxt, path + [nxt]))
+
+
+def shortest_path(graph, start, goal):
+    try:
+        return next(bfs_path(graph, start, goal))
+    except StopIteration:
+        return None
