@@ -10,3 +10,17 @@ def bfsearch(graph, start):
             queue.extend(graph[vertex] -visited)
 
     return visited
+
+
+
+def bfs_path(graph, start, goal):
+    queue = [(start, [start])]
+
+    while queue:
+        (vertex, path) = queue.pop(0)
+
+        for nxt in graph[vertex] - set(path):
+            if nxt == goal:
+                yield path + [nxt]
+            else:
+                queue.append((nxt, path + [nxt]))
