@@ -16,6 +16,15 @@ graph2 = {'A' : set(['B', 'C']),
          'G' : set(['D','F'])}
 
 
+travel = {'New York' : set(['Baltimore','Newark','Dallars', 'Houston']),
+          'Baltimore' : set(['Orlando', 'Newark']),
+          'Newark' : set(['Orlando', 'Atlanta']),
+          'Dallars' : set(['Newark', 'Atlanta', 'Houston']),
+          'Houston' : set(['New York']),
+          'Orlando' : set(['New York', 'Atlanta']),
+          'Atlanta' : set(['Baltimore', 'Houston'])}
+          
+
 def bfsearch(graph, start):
     visited, queue = set(), [start]
 
