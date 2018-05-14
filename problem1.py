@@ -13,7 +13,7 @@ def myprofit(prices_list):
     return maxprofit
 
 
-def mymargin(prices_day):
+def dailyMargin(prices_day):
 
     max_margin = 0
     margin_list = {}
@@ -22,10 +22,10 @@ def mymargin(prices_day):
         price_diff = abs(prices_day[i] - prices_day[i+1])
         margin_list['Day '+str(1+i)] = price_diff
         max_margin = max(max_margin, price_diff)
-   
+
     max_dic = max(margin_list.items(), key=operator.itemgetter(1))
 
-    return max_margin, margin_list, max_dic
+    return max_dic, margin_list, 
 
 
 myprofit([10, 23, 22, 56, 21, 11, 19, 45])
