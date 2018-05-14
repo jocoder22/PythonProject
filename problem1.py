@@ -25,7 +25,7 @@ def dailyMargin(prices_day):
 
     max_dic = max(margin_list.items(), key=operator.itemgetter(1))
 
-    return max_dic, margin_list, 
+    return max_dic, margin_list
 
 
 myprofit([10, 23, 22, 56, 21, 11, 19, 45])
