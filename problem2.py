@@ -34,3 +34,12 @@ def calc_overlap(coord1, dim1, coord2, dim2):
     return (greater, overlap)
 
 
+def Rect_overlap(r1, r2):
+    X_lap, w_lap = calc_overlap(r1['x'], r1['w'], r2['x'], r2['w'])
+    y_lap, h_lap = calc_overlap(r1['y'], r1['h'], r2['y'], r2['h'])
+
+    if not w_lap or not h_lap:
+        print('No overlap!')
+        return None
+
+    return {'x': X_lap, 'y': y_lap, 'w': w_lap, 'h': h_lap}
