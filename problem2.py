@@ -19,3 +19,18 @@ def index_prod(mylist):
         i -= 1
 
     return output
+
+
+def calc_overlap(coord1, dim1, coord2, dim2):
+
+    greater = max(coord1, coord2)
+    lower = min(coord1 + dim1, coord2 + dim2)
+
+    if greater >= lower:
+        return (None, None)
+
+    overlap = lower - greater
+
+    return (greater, overlap)
+
+
