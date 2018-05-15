@@ -1,15 +1,16 @@
 import operator
+import math
 
 
 def myprofit(prices_list):
     minprice = prices_list[0]
 
-    maxprofit = prices_list[1] - prices_list[0]
+    maxprofit = -math.inf
 
-    for price in prices_list:
-        minprice = min(minprice, price)
+    for price in prices_list[1:]:
         profit = price - minprice
         maxprofit = max(maxprofit, profit)
+        minprice = price
 
     return maxprofit
 
