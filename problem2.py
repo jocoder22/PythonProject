@@ -43,3 +43,10 @@ def Rect_overlap(r1, r2):
         return None
 
     return {'x': X_lap, 'y': y_lap, 'w': w_lap, 'h': h_lap}
+
+
+index_prod([3, 4, 1, 5, 6])
+r1 = {'x': 2, 'y': 4, 'w': 5, 'h': 12}
+r1 = {'x': 1, 'y': 5, 'w': 7, 'h': 14}
+
+Rect_overlap(r1, r2)
