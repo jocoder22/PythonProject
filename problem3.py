@@ -40,6 +40,11 @@ def fibI():
         yield a
 
 
+g = fibI()
+next(g)
+next(g)
+
+
 # Using memoization
 def fibmemo(fn, arg):
     memo = {}
