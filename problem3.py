@@ -14,3 +14,11 @@ def fibR(n):
     return fibR(n-1) + fibR(n-2)
 
 
+a, b = 0, 1
+
+
+def fibI():
+    global a, b
+    while True:
+        a, b = b, a+b
+        yield a
