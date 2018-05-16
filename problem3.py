@@ -3,14 +3,27 @@
 
 # Using looping technique
 def fib(n):
+    if n <= 0:
+        print('Incorrect n: must be greater than zero')
     a, b = 1, 1
     for i in range(n-1):
         a, b = b, a+b
     return a
 
 
+def fib0(n):
+    if n <= 0:
+        print('Incorrect n: must be greater than zero')
+    a, b = 0, 1
+    for i in range(1, n):
+        a, b = b, a+b
+    return a
+
+
 # Using recursion
 def fibR(n):
+    if n <= 0:
+        print('Incorrect n: must be greater than zero')
     if n == 1 or n == 2:
         return 1
     return fibR(n-1) + fibR(n-2)
@@ -59,3 +72,4 @@ def fib2(n):
     return a
 
 
+print(fib2(5))
