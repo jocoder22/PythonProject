@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-from graph2 import State, Node, Graph
 
 graph = {'A' : set(['B', 'C']),
          'B' : set(['A', 'D', 'E']),
