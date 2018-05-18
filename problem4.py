@@ -31,7 +31,8 @@ def convert5to7():
         if num > 21:
             continue
 
-        return num %7 + 1
+        return num % 7 + 1
 
-        
+
 convert7to5()
+convert5to7()
