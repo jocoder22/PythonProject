@@ -26,7 +26,7 @@ def convert5to7():
         roll_1 = dice5()
         roll_2 = dice5()
 
-        num = ((roll_1 - 1) * 5)  + roll_2
+        num = ((roll_1 - 1) * 5) + roll_2
 
         if num > 21:
             continue
