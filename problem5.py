@@ -26,10 +26,10 @@ def better_sqaure(n):
         return 1
 
     low = 0
-    high = (n / 2) + 1
+    high = (n // 2) + 1
 
     while low + 1 < high:
-        mid = low + (high + low)/2
+        mid = low + (high + low)//2
 
         square = mid ** 2
 
