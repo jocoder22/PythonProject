@@ -40,3 +40,7 @@ def better_sqaure(n):
         else:
             high = mid
     return low
+
+
+squareRoot(89)
+better_sqaure(56)
