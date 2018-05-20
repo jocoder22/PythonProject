@@ -8,7 +8,7 @@ def squareRoot(n):
     if n == 1:
         return 1
 
-    for k in range((n / 2) + 1):
+    for k in range((n // 2) + 1):
         if k**2 == n:
             return k
 
