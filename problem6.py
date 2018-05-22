@@ -20,3 +20,6 @@ def threeM(lst):
         low = min(low, num)
 
     return high_prod3
+
+
+threeM([90, 10, 59, 87, -15, -33, 36, 91, 12, 53])
