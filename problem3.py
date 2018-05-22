@@ -54,7 +54,8 @@ def fibmemo(fn, arg):
 
 
 fibm = fibmemo(fib, 7)
-print(fibm)
+fibm2 = fibmemo(fib, 45)
+print(fibm, fibm2)
 
 
 # Using memoization as decorator
@@ -78,3 +79,4 @@ def fib2(n):
 
 
 print(fib2(5))
+print(fib2(58))
