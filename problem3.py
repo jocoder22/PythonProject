@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import timeit
+
 
 # Using looping technique
 def fib(n):
@@ -84,3 +86,10 @@ def fib2(n):
 
 print(fib2(5))
 print(fib2(58))
+
+
+# using timeit
+print(timeit.timeit("fib2(30)", globals=globals()))
+print(timeit.timeit("fib(30)", globals=globals()))
+print(timeit.timeit("fib0(30)", globals=globals()))
+print(timeit.timeit("fib2(30)", globals=globals()))
