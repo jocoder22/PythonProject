@@ -42,5 +42,10 @@ def better_square(n):
     return low
 
 
-# squareRoot(89)
-# better_square(56)
+squareRoot(89)
+better_square(56)
+
+squareRoot(124)
+better_square(371)
+
+
