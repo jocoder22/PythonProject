@@ -29,6 +29,10 @@ def fibR(n):
     return fibR(n-1) + fibR(n-2)
 
 
+fib(22)
+fib0(22)
+fibR(22)
+
 a, b = 0, 1
 
 
