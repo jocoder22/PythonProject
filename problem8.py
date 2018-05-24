@@ -6,4 +6,7 @@ class Node:
         self.left = None
         self.right = None
         self.value = value
-        
+
+
+INF = float("infinity")
+NEG_INF = float("-infinity")
