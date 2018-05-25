@@ -13,4 +13,5 @@ def removeDup(lst):
 
     return ''.join(result)
 
-    
+
+print(removeDup('babababadadamamayayameme'))
