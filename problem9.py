@@ -15,6 +15,7 @@ def removeDupString(s):
 
 
 print(removeDupString('babababadadamamayayameme'))
+print(removeDupString('manamadada22'))
 
 
 def removeDupList(lst):
