@@ -18,7 +18,7 @@ def convert7to5():
 
 
 def dice5():
-    randint(1, 5)
+    return randint(1, 5)
 
 
 def convert5to7():
