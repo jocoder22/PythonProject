@@ -16,12 +16,17 @@ def sumUP(lst, target):
 
 
 def sumUP2(lst, target):
-
+    
     for i in lst:
-        num2 = target - i
+        if target >= i:
+            num2 = target - i
 
-        if num2 in lst:
-            return True
+            if num2 in lst:
+                return True
     
     return False
 
+sumUP([5,6,7,4,7,2],16)
+sumUP([5,6,7,4,7,2],11)
+sumUP2([5,6,7,4,17,2],19)
+sumUP2([15,6,7,4,7,2],10)
