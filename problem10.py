@@ -13,3 +13,15 @@ def sumUP(lst, target):
         seen.add(i)
     
     return False
+
+
+def sumUP2(lst, target):
+
+    for i in lst:
+        num2 = target - i
+
+        if num2 in lst:
+            return True
+    
+    return False
+
