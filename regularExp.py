@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 import re, doctest, timeit
 
+
 # Regular Expression
 def mult_find(patterns, text):
 	'''
 	This function finds patterns in a given string
-	 
+
 	Input: String
 	 
 	Output: List
@@ -28,7 +29,7 @@ def mult_find(patterns, text):
 test_text = 'sdsd..sssddd...sdddsddd...dsds...dsssss..sdddd..sssdd..ssdsssd'
 test_text2 = 'This is an example. Let see if there are A b C D e in letters'
 test_patterns = [ 'sd*',  		# s followed by zero or more d's
-				  'sd+',		# s followed by one or more d's
+				 'sd+',		# s followed by one or more d's
 				  'sd?',		# s followed by zero or one d's
 				  'sd{3}',		# s followed by three d's
 				  'sd{2,3}',	# s followed by two or three d's
@@ -99,6 +100,18 @@ s3 = 'In the end cat and rat are catching fire'
 ## using logical 'OR' operator, |
 mm = 'January February March April May June July August September October November December'
 mbermonth = re.findall(r"\w*mber|\w*uary",mm)
+
+
+
+# Greedy and non-greedy re
+
+tag = '<div><em>This is wonderful</em><div>'
+tagfind = re.search(r'<.*>', tag)
+tagfind.group()
+
+
+
+
 
 if __name__ == '__main__':
     import doctest
