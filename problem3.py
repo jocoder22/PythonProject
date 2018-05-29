@@ -42,6 +42,7 @@ def fibR(n):
 fib(22)
 fib0(22)
 fibR(22)
+fibNet(22)
 
 a, b = 0, 1
 
@@ -97,8 +98,8 @@ print(fib2(58))
 
 
 # using timeit
-print('Timed fib2:',timeit.timeit("fib2(30)", globals=globals()))
-print('Timed fib:',timeit.timeit("fib(30)", globals=globals()))
-print('Timed fib0:',timeit.timeit("fib0(30)", globals=globals()))
-print('Timed fibmemo:',timeit.timeit("fibmemo(fib, 30)", globals=globals()))
-print('Timed fib:',timeit.timeit("fib2(30)", globals=globals()))
+print('Timed fib2:', timeit.timeit("fib2(30)", globals=globals()))
+print('Timed fib:', timeit.timeit("fib(30)", globals=globals()))
+print('Timed fib0:', timeit.timeit("fib0(30)", globals=globals()))
+print('Timed fibmemo:', timeit.timeit("fibmemo(fib, 30)", globals=globals()))
+print('Timed fib:', timeit.timeit("fib2(30)", globals=globals()))
