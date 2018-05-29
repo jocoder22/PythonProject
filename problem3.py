@@ -22,6 +22,14 @@ def fib0(n):
     return a
 
 
+def fibNet(n):
+    a, b = 0, 1
+    while a < n:
+        print(a, end=' ')
+        a, b = b, a+b
+    print()
+
+
 # Using recursion
 def fibR(n):
     if n <= 0:
