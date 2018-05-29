@@ -104,10 +104,14 @@ mbermonth = re.findall(r"\w*mber|\w*uary",mm)
 
 
 # Greedy and non-greedy re
-
+# Greedy search
 tag = '<div><em>This is wonderful</em><div>'
 tagfind = re.search(r'<.*>', tag)
 tagfind.group()
+
+
+# Non-greedy search
+re.search(r'<.*?>', tag).group()
 
 
 
