@@ -9,3 +9,9 @@ def unqID(lst):
     return unique_id
 
 unqID([1,2,3,1,2,2,4,5,6,6,5,4,2])
+unqID([2,4,5,6,6,5,4])
+unqID([1,1,2,2,4,5,6,6,5,2])
+
+
+
+
