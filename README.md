@@ -3,3 +3,5 @@ This project deals with Python's implementation of Graph, sorting and hashtable 
 ## Implementation
 
 ## Resource
+- [Python](https://www.python.org/)
+- [Udemy](https://www.udemy.com/python-for-data-structures-algorithms-and-interviews)
