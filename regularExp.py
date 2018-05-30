@@ -55,15 +55,15 @@ test_patterns3 = [ r'\d+',  	# sequence of digits, this is equivalent to the cla
 				  r'\W+',		# non-alphanumeric characters,  this is equivalent to the class [^a-zA-Z0-9_]
 				]
 
-mult_find(test_patterns,test_text)
-mult_find(test_patterns2,test_text2)
-mult_find(test_patterns3,test_text3)
+mult_find(test_patterns, test_text)
+mult_find(test_patterns2, test_text2)
+mult_find(test_patterns3, test_text3)
 
 # Exclusing by ^ e.g [^...]
 text_exclusion = 'Hello! Thanks. What is this?. I am fine.'
 pattern_exclusion = '[^!.? ]+'
 
-print(re.findall(pattern_exclusion,text_exclusion))
+print(re.findall(pattern_exclusion, text_exclusion))
 
 
 def regxx(expr, s):
