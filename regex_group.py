@@ -19,4 +19,3 @@ pattern3 = r'\b(?P<repeat>\w+)\s+(?P=repeat)\b'
 findrepeat = re.compile(pattern3)
 text3 = 'In the morning morning of of june'
 print(findrepeat.search(text3).group())
-
