@@ -24,6 +24,7 @@ iter_result = next(result2a)
 iter_result.group()
 iter_result = next(result2a)
 iter_result.group()
+iter_result.span()
 
 
 
