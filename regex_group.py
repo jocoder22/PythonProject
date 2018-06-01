@@ -12,7 +12,12 @@ text2 = 'My son in higher education lives with our cat catty'
 pattern2 = r'(cat)\w+'
 mysearch2 = re.compile(pattern2)
 result = mysearch2.findall(text2)
+print(result)
 
+pattern2a = r'(\w+) (\w+)'
+groupsearch = re.compile(pattern2a)
+result2 = groupsearch.search(text2)
+print(result2)
 
 # Looking for repeated word
 pattern3 = r'\b(?P<repeat>\w+)\s+(?P=repeat)\b'
