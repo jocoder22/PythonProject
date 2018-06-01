@@ -24,4 +24,7 @@ pat = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
 word_list = result.split(pat)
 len(word_list)
 
-
+# return match pattern also by using grouping
+pattern_group = r'(\s)'
+pgroup = re.compile(pattern_group)
+pgroup.split(text)
