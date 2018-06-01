@@ -16,8 +16,11 @@ print(result)
 
 pattern2a = r'(\w+) (\w+)'
 groupsearch = re.compile(pattern2a)
-result2 = groupsearch.search(text2)
+result2 = groupsearch.findall(text2)
 print(result2)
+
+result2a = groupsearch.finditer(text2)
+
 
 # Looking for repeated word
 pattern3 = r'\b(?P<repeat>\w+)\s+(?P=repeat)\b'
