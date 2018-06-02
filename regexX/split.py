@@ -25,6 +25,17 @@ word_list = result.split(pat)
 len(word_list)
 
 # return match pattern also by using grouping
+# the use of group will add the pattern to the result
 pattern_group = r'(\s)'
 pgroup = re.compile(pattern_group)
 pgroup.split(text)
+
+yy = re.compile(r'and')
+yyy = re.compile(r'(and)')
+
+tex = 'Bright and Heaver and Food and Good'
+yy.split(tex)
+# ['Bright ', ' Heaver ', ' Food ', ' Good']
+
+yyy.split(tex)
+# ['Bright ', 'and', ' Heaver ', 'and', ' Food ', 'and', ' Good']
