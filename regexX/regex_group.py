@@ -10,10 +10,13 @@ print(mysearch.match(text).group())
 
 
 text2 = 'My son in higher education lives with our cat catty'
-pattern2 = r'(?P<Mycat>cat)\w+'
+pattern2 = r'\w+(?P<Mycat>cat)\w+'
+pattn = r'(?P<Jocan>\w*?cat\w*)'
 mysearch2 = re.compile(pattern2)
 result = mysearch2.findall(text2)
 print(result)
+print(mysearch2.search(text2).groupdict())
+
 
 pattern2a = r'(\w+) (\w+)'
 groupsearch = re.compile(pattern2a)
