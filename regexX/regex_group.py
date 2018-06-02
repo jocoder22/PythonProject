@@ -4,12 +4,13 @@ import re
 
 
 text = 'Babamiloo'
-pattern = r'(ba)'
+pattern = r'(?i)(ba)' # (?i) is pattern flag, same as re.ignorecase
 mysearch = re.compile(pattern)
-print(mysearch.match(text))
+print(mysearch.match(text).group())
+
 
 text2 = 'My son in higher education lives with our cat catty'
-pattern2 = r'(cat)\w+'
+pattern2 = r'(?P<Mycat>cat)\w+'
 mysearch2 = re.compile(pattern2)
 result = mysearch2.findall(text2)
 print(result)
