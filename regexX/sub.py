@@ -11,13 +11,14 @@ pattern = r'[0-9]+'
 replace = re.compile(pattern)
 
 newBirthday = replace.sub("23",text)
-print(newBirthday)
+print(newBirthday) # Mary birthday is on 23th of May
+
 
 # re.sub will replace the leftmost non-overlapping match
 text2 = "My telephone number is 222-222-2222"
 phonePattern = r'22'
 newNumber = re.sub(phonePattern, "55", text2)
-print(newNumber)
+print(newNumber) # My telephone number is 552-552-5555
 
 
 # repl can be a function
@@ -30,11 +31,11 @@ def repl_function(matchobj):
 
 text2a = 'A good day 32'
 newAddress =  re.sub('([a-zA-Z0-9])', repl_function, text2a)
-print(newAddress)
+print(newAddress) # s ssss sss 99 
 
 
 def repl_function2(matchobj):
     if matchobj.group(1) == 'Boy': return "John"
     else: return matchobj(1)
 
-print(re.sub(r'(Boy)', repl_function2, 'Boy is a man'))
+print(re.sub(r'(Boy)', repl_function2, 'Boy is a man')) # John is a man
