@@ -45,3 +45,9 @@ textn = "This is the 15th of March, 1990 mans"
 subnPattern = re.compile(r'(\d+[\w+]?)|^T|s$')
 subnn = subnPattern.subn('xx', textn)
 
+subb = re.compile(r'(?i)(\b^[tm]\w*\b))')
+subb2 = subb.subn('XX', textn)
+
+
+
+
