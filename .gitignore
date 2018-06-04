@@ -14,4 +14,6 @@ config.gypi
 *.orig
 __*
 _*
+.vscode
+
 
