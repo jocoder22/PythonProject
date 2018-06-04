@@ -41,11 +41,11 @@ def repl_function2(matchobj):
 print(re.sub(r'(Boy)', repl_function2, 'Boy is a man')) # John is a man
 
 # using subn
-textn = "This is the 15th of March, 1990 mans"
+textn = "This is the 15th of March, 1990 records"
 subnPattern = re.compile(r'(\d+[\w+]?)|^T|s$')
 subnn = subnPattern.subn('xx', textn)
 
-subb = re.compile(r'(?i)(\b^[tm]\w*\b)')
+subb = re.compile(r'(?i)\b[tm]+\w*\b')
 subb2 = subb.subn('XX', textn)
 
 textn2 = textn + " not March but June"
