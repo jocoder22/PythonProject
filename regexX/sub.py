@@ -42,5 +42,6 @@ print(re.sub(r'(Boy)', repl_function2, 'Boy is a man')) # John is a man
 
 # using subn
 textn = "This is the 15th of March, 1990"
-subnPattern = r'(\d+\w+\s)'
-subnn = re.subn(subnPattern, 'nodigit',textn, 2, re.I)
+subnPattern = re.compile(r'(\d+\w+)')
+subnn = subnPattern.subn('nodigit', textn, 2, re.I)
+
