@@ -48,7 +48,7 @@ subnn = subnPattern.subn('xx', textn)
 subb = re.compile(r'(?i)\b[tm]+\w*\b')
 subb2 = subb.subn('XX', textn)
 
-textn2 = textn + " not March but June"
+textn2 = textn + " not march but June"
 sub2 = subb.sub("XX", textn2)
 
 
