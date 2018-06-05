@@ -59,23 +59,25 @@ def itemR(a):
 
 ppitem = re.compile(r'\w+')
 pptext = 'I need coffe, tea, rice, donut, beans and bread'
-# ppitem.sub(itemR(items), pptext)
+ppitem.sub(itemR(items), pptext) # 'I need XX, tea, rice, XX, beans and XX'
 
 
 
 # using subn
 # subn(repl, string, count=0) --> with compilation
 # subn(pattern, repl, string, count=0) --> without compilation
-# re.subn returns a tuple with number of substitutions made
+# re.subn returns a tuple with substituted string and number of substitutions made
 textn = "This is the 15th of March, 1990 records"
 subnPattern = re.compile(r'(\d+[\w+]?)|^T|s$')
 subnn = subnPattern.subn('xx', textn)
+print("Final result: ", subnn[0])
+print("Substitutions made: ", subnn[1])
 
 subb = re.compile(r'(?i)\b[tm]+\w*\b')
 subb2 = subb.subn('XX', textn)
 
 textn2 = textn + " not march but June"
-sub2 = subb.sub("XX", textn2)
+sub2 = subb.subn("XX", textn2)
 
 
 
