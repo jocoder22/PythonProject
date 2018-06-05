@@ -46,6 +46,22 @@ labf = re.compile(r'\d+')
 labrep = labf.sub(lambda a: a.group(0)+'3', text2b)
 # 'In the 23nd of june, on the 23nd day and in the 33rd year'
 
+# using dictionary
+items = {"coffe":3, "sugar":8, "milk":1, "donut":5, "bread":6}
+
+def itemR(a):
+
+    item = a.group(0)
+
+    if item in items:
+        return "XX"
+    else: return item
+
+ppitem = re.compile(r'\w+')
+pptext = 'I need coffe, tea, rice, donut, beans and bread'
+# ppitem.sub(itemR(items), pptext)
+
+
 
 # using subn
 # subn(repl, string, count=0) --> with compilation
