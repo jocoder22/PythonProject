@@ -40,6 +40,12 @@ def repl_function2(matchobj):
 
 print(re.sub(r'(Boy)', repl_function2, 'Boy is a man')) # John is a man
 
+# using lambda
+text2b = 'In the 2nd of june, on the 2nd day and in the 3rd year'
+labf = re.compile(r'\d+')
+labrep = labf.sub(lambda a: a.group(0)+'3', text2b)
+
+
 # using subn
 # subn(repl, string, count=0) --> with compilation
 # subn(pattern, repl, string, count=0) --> without compilation
