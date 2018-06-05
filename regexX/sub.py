@@ -22,7 +22,7 @@ print(newNumber) # My telephone number is 552-552-5555
 
 
 # repl can be a function
-# the pattern must be a group
+# in the example our pattern is a group
 def repl_function(matchobj):
     if matchobj.group(1) in r'[0,1,2,3,4]':
         return '9'
@@ -44,6 +44,7 @@ print(re.sub(r'(Boy)', repl_function2, 'Boy is a man')) # John is a man
 text2b = 'In the 2nd of june, on the 2nd day and in the 3rd year'
 labf = re.compile(r'\d+')
 labrep = labf.sub(lambda a: a.group(0)+'3', text2b)
+# 'In the 23nd of june, on the 23nd day and in the 33rd year'
 
 
 # using subn
