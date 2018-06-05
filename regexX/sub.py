@@ -41,6 +41,9 @@ def repl_function2(matchobj):
 print(re.sub(r'(Boy)', repl_function2, 'Boy is a man')) # John is a man
 
 # using subn
+# subn(repl, string, count=0) --> with compilation
+# subn(pattern, repl, string, count=0) --> without compilation
+# re.subn returns a tuple with number of substitutions made
 textn = "This is the 15th of March, 1990 records"
 subnPattern = re.compile(r'(\d+[\w+]?)|^T|s$')
 subnn = subnPattern.subn('xx', textn)
