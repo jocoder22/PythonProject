@@ -59,7 +59,7 @@ def itemR(a):
 
 ppitem = re.compile(r'\w+')
 pptext = 'I need coffe, tea, rice, donut, beans and bread'
-ppitem.sub(itemR(items), pptext) # 'I need XX, tea, rice, XX, beans and XX'
+ppitem.sub(itemR, pptext) # 'I need XX, tea, rice, XX, beans and XX'
 
 
 
@@ -75,9 +75,13 @@ print("Substitutions made: ", subnn[1])
 
 subb = re.compile(r'(?i)\b[tm]+\w*\b')
 subb2 = subb.subn('XX', textn)
+print("Final result: ", subb2[0])
+print("Substitutions made: ", subb2[1])
 
 textn2 = textn + " not march but June"
 sub2 = subb.subn("XX", textn2)
+print("Final result: ", sub2[0])
+print("Substitutions made: ", sub2[1])
 
 
 
