@@ -6,6 +6,8 @@ import re
 p = r'(?P<group1>\bE\w+)+\W(?P<group2>\w+)'
 pattern = re.compile(p, re.I)
 text = "The school baseball team is in the  Eve evening loop"
-result = pattern.search(text) # ['Eve', 'evening']
-
+result = pattern.search(text) 
+result.group(1)  # 'Eve'
+result.group('group1') # 'Eve' 
+result.groupdict()  # {'group1': 'Eve', 'group2': 'evening'}
 
