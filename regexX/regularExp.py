@@ -79,8 +79,6 @@ def regxx(expr, s):
 	['cat', 'cat']
 	>>> regxx(r'cat.', ss)
 	['cats', 'catt']
-	>>> regxx(r'\b.at.\b',ss)
-	['cats', 'rat ']
 
 	'''
 	if re.search(expr, s):
