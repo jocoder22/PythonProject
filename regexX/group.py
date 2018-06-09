@@ -13,7 +13,7 @@ result.groupdict()  # {'group1': 'Eve', 'group2': 'evening'}
 
 
 # backreference and conditional
-zipcode = r'((?P<code1>\d{5})-(?P=code1(\d{2})|(\w{2})))'
+zipcode = r'((?P<code1>\d{5})-(?(code1)(\d{2})|(\w{2})))'
 correctzip = re.search(zipcode, '12222-6879')
 
 
