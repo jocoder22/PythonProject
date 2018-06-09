@@ -20,6 +20,7 @@ correctzip = re.search(zipcode, '12222-6879')
 extension = r'((?P<area>\d{3})-(?P=area)-\d{4}(?P<ex> Ext-)?(?(ex)(?=\d{4}$)|(?= \w{2}$)))'
 check = re.compile(extension)
 correctext = check.search('121-456-873 Ext-5698') # None
-
+check.match('123-123-2345 Ext-5645').groups() # ('123-123-2345 Ext-', '123', ' Ext-')
+check.match('123-123-2345 NY').groups() # ('123-123-2345', '123', None)
 
 
