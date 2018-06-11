@@ -82,9 +82,9 @@ def regxx(expr, s):
 	['cats', 'rat ']
 	'''
 	if re.search(expr, s):
-		print(re.findall(expr,s))
+		print(re.findall(expr, s))
 	else:
-		print(f'No {expr} found :-)')
+		print(f'No match found  in {s} :-)')
 
 ### Any Character .
 expr1 = r'.at'
@@ -104,13 +104,14 @@ mbermonth = re.findall(r"\w*mber|\w*uary",mm)
 
 # Greedy and non-greedy re
 # Greedy search
-tag = '<div><em>This is wonderful</em><div>'
+tag = '<div><em>This is a wonderful day</em><div>'
 tagfind = re.search(r'<.*>', tag)
-tagfind.group()
+print(tagfind.group()) # <div><em>This is a wonderful day</em><div>
 
 
 # Non-greedy search
-re.search(r'<.*?>', tag).group()
+NonGreedy = re.search(r'<.*?>', tag)
+print(NonGreedy.group()) # <div>
 
 
 
