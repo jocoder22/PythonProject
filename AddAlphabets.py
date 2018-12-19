@@ -13,7 +13,7 @@ def numsum(str):
 		for key, value in d_.items():
 			if ab_.lower() == key:
 				total +=  value
-                
+
 	return total
 		
 	
@@ -25,4 +25,17 @@ def numsum2(str):
 		total +=  value
 	
 	return total
+
+
+def timeitout(func, *args, **kwargs):
+	def wrapper():
+		return func(*args, **kwargs)
+	return wrapper
+	
+
+good = "FLKDFDKLrukadd"
+
+timefunc = timeitout(numsum, good)
+timeit.timeit(timefunc, number=10000)
+timeit.timeit("numsum(good)", number=10000, globals=globals())
 
