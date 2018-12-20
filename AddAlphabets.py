@@ -35,7 +35,22 @@ def timeitout(func, *args, **kwargs):
 
 good = "FLKDFDKLrukadd"
 
+print(numsum(good))
+print(numsum2(good))
 timefunc = timeitout(numsum, good)
-timeit.timeit(timefunc, number=10000)
-timeit.timeit("numsum(good)", number=10000, globals=globals())
+print(timeit.timeit(timefunc, number=100000))
+print(timeit.timeit("numsum(good)", number=100000, globals=globals()))
+print(timeit.timeit("numsum2(good)", number=100000, globals=globals()))
 
+
+def numsum3(str):
+	a_ = list(string.ascii_lowercase)
+	total = 0
+	for ab_ in str:
+		for index, value in enumerate(a_):
+			if ab_.lower() == value:
+				total += index + 1
+	
+	return total
+print(numsum3(good))
+print(timeit.timeit("numsum3(good)", number=100000, globals=globals()))
