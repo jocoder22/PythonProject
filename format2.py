@@ -46,7 +46,7 @@ def wordPermut(w):
     for i in list(permutSet):
         mylist2.append(''.join(i))
     # print(mylist2)
-    # print(len(mylist2))
+    print(len(mylist2))
     return mylist2
 
 
