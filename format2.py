@@ -47,7 +47,18 @@ def wordPermut(w):
     print(mylist2)
     print(len(mylist2))
 
+def wordPermut(w):
+    from itertools import permutations
+    mylist2 = list()
+    permutSet = permutations(w)
+
+    for i in list(permutSet):
+        if i not in mylist2:
+            mylist2.append(''.join(i))
+    print(mylist2)
+    print(len(mylist2))
+
 
 shuffle_word("tlcccr")
-
+wordPermut("tlcccr")
 word_form("dkeke", "loos")
