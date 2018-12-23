@@ -57,13 +57,17 @@ print(exponent_dict)
 # :^ center alignment
 # :> right alignment
 
-
-for i in range(40):
-    print(i, end='')
+for i in range(7):
+    for n in range(1,11):
+        if n == 10:
+            n = 0
+        print(n, end='')
     
 print()
 print("This {0:^24} is centered: {1:^10}!".format("PACK", "YES"))
-
+print("This {0:>24} is rightend: {1:>10}!".format("PACK", "YES"))
+print("This {0:<24} is left-end: {1:<10}!".format("PACK", "YES"))
+print("This {0:24} is left-end: {1:10}!".format("PACK", "YES"))
 
 def word_form(*args):
     for k in args:
