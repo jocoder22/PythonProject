@@ -54,3 +54,18 @@ def numsum3(str):
 	return total
 print(numsum3(good))
 print(timeit.timeit("numsum3(good)", number=100000, globals=globals()))
+
+
+def time_func(funt):
+	n_ = 100000
+	time0 = time.time()
+	for _ in range(n_): funt
+	time1 = time.time()
+
+	totalTime = time1-time0
+	return totalTime
+
+time_func(numsum("PIDAHDKDkahudjhlad"))
+
+
+
