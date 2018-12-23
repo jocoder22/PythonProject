@@ -34,8 +34,8 @@ def shuffle_word(s):
 
         if new not in mylist:
             mylist.append(new)
-    # print(mylist)
-    # print(len(mylist))
+    print(mylist)
+    print(len(mylist))
     return mylist
 
 def wordPermut(w):
@@ -45,7 +45,7 @@ def wordPermut(w):
 
     for i in list(permutSet):
         mylist2.append(''.join(i))
-    # print(mylist2)
+    print(mylist2)
     print(len(mylist2))
     return mylist2
 
