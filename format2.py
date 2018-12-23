@@ -2,11 +2,6 @@
 
 import timeit
 
-for i in range(40):
-    print(i, end='')
-    
-print()
-
 # formating using keyword argument
 print('This is {x} {} in {}'.format('morning', 'USA', x='Christmas'))
 print('This is {x} {1} in {0}'.format('morning', 'USA', x='Christmas'))
@@ -55,6 +50,19 @@ print(octal_dict)
 print(hex_low_dict)
 print(hex_up_dict)
 print(exponent_dict)
+
+
+# alignment format 
+# :<  left alignment
+# :^ center alignment
+# :> right alignment
+
+
+for i in range(40):
+    print(i, end='')
+    
+print()
+
 
 def word_form(*args):
     for k in args:
