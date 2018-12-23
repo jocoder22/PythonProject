@@ -62,6 +62,7 @@ for i in range(40):
     print(i, end='')
     
 print()
+print("This {0:^24} is centered: {1:^10}!".format("PACK", "YES"))
 
 
 def word_form(*args):
