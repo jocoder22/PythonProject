@@ -18,11 +18,43 @@ print([i for i in range(10)])
 
 # formatting with Type
 # string(position:conversion)
-ex1 = [i for i in range(10)]
+ex1 = [i for i in range(25)]
 myex_list = list()
+myex_list2 = list()
 for i in ex1:
     if i < 4:
         print('This is 2 decimal places {:.2f}'.format(i))
+        myex_list.append(float(i))
+print(myex_list)
+for n in myex_list:
+    result = n ** 4
+    myex_list2.append(result)
+    print('This is integer: {:.0f}'.format(result))
+
+binary_dict = dict()
+octal_dict = dict()
+hex_low_dict = dict()
+hex_up_dict = dict()
+exponent_dict = dict()
+for n in ex1:
+    result = n ** 4
+    binary_dict[result] = '{:b}'.format(result) 
+    octal_dict[result] = '{:o}'.format(result) 
+    hex_low_dict[result] = '{:x}'.format(result) 
+    hex_up_dict[result] = '{:X}'.format(result) 
+    exponent_dict[result] = '{:e}'.format(result) 
+    # print('This is binary: {:b}'.format(result))
+    # print('This is octal: {:o}'.format(result))
+    # print('This is hexadecimal with lowercase letters after 9: {:x}'.format(result))
+    # print('This is hexadecimal with upperrcase letters after 9: {:X}'.format(result))
+    # print('This is exponent notation: {:e}'.format(result))
+
+print(myex_list2)
+print(binary_dict)
+print(octal_dict)
+print(hex_low_dict)
+print(hex_up_dict)
+print(exponent_dict)
 
 def word_form(*args):
     for k in args:
