@@ -20,4 +20,34 @@ def word_form(*args):
            print(i, end='   ')
         print('')
 
+
+def shuffle_word(s):
+    import random
+    mylist = list()
+    for _ in range(5000):
+        st = [i for i in s]
+       
+        random.shuffle(st)
+        new = "".join(st)
+
+        if new not in mylist:
+            mylist.append(new)
+    print(mylist)
+    print(len(mylist))
+    return mylist
+
+def wordPermut(w):
+    from itertools import permutations
+    mylist2 = list()
+    permutSet = permutations(w)
+
+    for i in list(permutSet):
+        if i not in mylist2:
+            mylist2.append(''.join(i))
+    print(mylist2)
+    print(len(mylist2))
+
+
+shuffle_word("tlcccr")
+
 word_form("dkeke", "loos")
