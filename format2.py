@@ -16,6 +16,14 @@ s1 = 'This is {} {}'.format('String', 'One')
 print(s1)
 print([i for i in range(10)])
 
+# formatting with Type
+# string(position:conversion)
+ex1 = [i for i in range(10)]
+myex_list = list()
+for i in ex1:
+    if i < 4:
+        print('This is 2 decimal places {:.2f}'.format(i))
+
 def word_form(*args):
     for k in args:
         for i in k:
@@ -51,10 +59,10 @@ def wordPermut(w):
 
 
 # shuffle_word("tlcccr")
-myword = "tlcccr"
-wordPermut("tlcccr")
-word_form("dkeke", "loos")
-shuffle_word("tlcccr")
+# myword = "tlcccr"
+# wordPermut("tlcccr")
+# word_form("dkeke", "loos")
+# shuffle_word("tlcccr")
 
 # ti = timeit.timeit('wordPermut(myword)', number=10, globals=globals())
 # t2 = timeit.timeit('shuffle_word(myword)', number=10, globals=globals())
@@ -72,4 +80,4 @@ def program_performance(a, b, c):
         r = round(t22/t11, 1)
         print('{} is {} times faster then {}'.format(f1, r, f2))
 
-program_performance(shuffle_word , wordPermut, "boutte")
+# program_performance(shuffle_word , wordPermut, "boutte")
