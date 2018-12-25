@@ -29,6 +29,14 @@ def numsum2(str):
 	return total
 
 
+def numsum22(str):
+	a_ = list(string.ascii_lowercase)
+	total = 0
+	for ab_ in str:
+		total += a_.index(ab_.lower()) + 1
+	
+	return total
+
 
 def timeitout(func, *args, **kwargs):
 	def wrapper():
@@ -46,7 +54,7 @@ good = "FLKDFDKLrukadd"
 # print(timeit.timeit("numsum2(good)", number=100000, globals=globals()))
 
 
-program_performance(numsum, numsum2, "FLKDFDKLrukadd")
+program_performance(numsum22, numsum2, "FLKDFDKLrukadd")
 
 def numsum3(str):
 	a_ = list(string.ascii_lowercase)
