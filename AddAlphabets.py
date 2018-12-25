@@ -54,7 +54,7 @@ good = "FLKDFDKLrukadd"
 # print(timeit.timeit("numsum2(good)", number=100000, globals=globals()))
 
 
-program_performance(numsum22, numsum2, "FLKDFDKLrukadd")
+program_performance(numsum, numsum2, "FLKDFDKLrukadd")
 
 def numsum3(str):
 	a_ = list(string.ascii_lowercase)
@@ -69,7 +69,7 @@ def numsum3(str):
 # print(numsum3(good))
 # print(timeit.timeit("numsum3(good)", number=100000, globals=globals()))
 
-# program_performance(numsum3, numsum2, "FLKDFDKLrukadd")
+program_performance(numsum3, numsum2, "FLKDFDKLrukadd")
 
 def time_func(funt):
 	n_ = 100000
