@@ -3,6 +3,8 @@
 import time
 import timeit
 import string
+from program_timer import program_performance
+
 
 def numsum(str):
 	a_ = list(string.ascii_lowercase)
@@ -23,8 +25,9 @@ def numsum2(str):
 	for ab_ in str:
 		value = a_.index(ab_.lower()) + 1
 		total +=  value
-	
+
 	return total
+
 
 
 def timeitout(func, *args, **kwargs):
@@ -35,13 +38,15 @@ def timeitout(func, *args, **kwargs):
 
 good = "FLKDFDKLrukadd"
 
-print(numsum(good))
-print(numsum2(good))
-timefunc = timeitout(numsum, good)
-print(timeit.timeit(timefunc, number=100000))
-print(timeit.timeit("numsum(good)", number=100000, globals=globals()))
-print(timeit.timeit("numsum2(good)", number=100000, globals=globals()))
+# print(numsum(good))
+# print(numsum2(good))
+# timefunc = timeitout(numsum, good)
+# print(timeit.timeit(timefunc, number=100000))
+# print(timeit.timeit("numsum(good)", number=100000, globals=globals()))
+# print(timeit.timeit("numsum2(good)", number=100000, globals=globals()))
 
+
+program_performance(numsum, numsum2, "FLKDFDKLrukadd")
 
 def numsum3(str):
 	a_ = list(string.ascii_lowercase)
@@ -52,9 +57,11 @@ def numsum3(str):
 				total += index + 1
 	
 	return total
-print(numsum3(good))
-print(timeit.timeit("numsum3(good)", number=100000, globals=globals()))
 
+# print(numsum3(good))
+# print(timeit.timeit("numsum3(good)", number=100000, globals=globals()))
+
+# program_performance(numsum3, numsum2, "FLKDFDKLrukadd")
 
 def time_func(funt):
 	n_ = 100000

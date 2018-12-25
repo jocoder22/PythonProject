@@ -126,3 +126,7 @@ def program_performance(a, b, c):
         print('{} is {} times faster then {}'.format(f1, r, f2))
 
 # program_performance(shuffle_word , wordPermut, "boutte")
+
+if __name__ == '__main__':
+        program_performance(shuffle_word , wordPermut, "boutte")
+        
