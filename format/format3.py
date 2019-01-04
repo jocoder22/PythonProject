@@ -21,5 +21,14 @@ for keys, values in visitors.items():
 
 
 for item, price in electronics.items():
-    tax = 0.193
-    print(f'The price of {item} is ${float(price + (tax * price)):.2f}')
+    taxRate = 0.193
+    print(f'The price of {item} is ${float(price + (taxRate * price)):.2f}')
+ 
+
+ 
+print(f'Name{"":9} Price{"":9} Totaltax{"":5}  FinalPrice')
+
+for item, price in electronics.items():
+    taxRate = 0.193
+    total_tax = price * taxRate
+    print(f'{item:12}  ${price:<13.2f} ${total_tax:<13.2f} ${price + total_tax:.2f}')
