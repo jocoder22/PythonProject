@@ -25,10 +25,16 @@ for item, price in electronics.items():
     print(f'The price of {item} is ${float(price + (taxRate * price)):.2f}')
  
 
- 
+
 print(f'Name{"":9} Price{"":9} Totaltax{"":5}  FinalPrice')
 
 for item, price in electronics.items():
     taxRate = 0.193
     total_tax = price * taxRate
     print(f'{item:12}  ${price:<13.2f} ${total_tax:<13.2f} ${price + total_tax:.2f}')
+
+# Apppy repr() ==> !, str() ==> !s or ascii() ==> !a
+print(f'The guest name is {guest}')
+print(f'The guest name is {guest!s}')
+print(f'The guest name is {guest!r}')
+print(f'The guest name is {guest!a}')
