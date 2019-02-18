@@ -28,7 +28,7 @@ def mult_find(patterns, text):
 test_text = 'sdsd..sssddd...sdddsddd...dsds...dsssss..sdddd..sssdd..ssdsssd'
 test_text2 = 'This is an example. Let see if there are A b C D e in letters'
 test_patterns = [ 'sd*',  		# s followed by zero or more d's
-				 'sd+',		# s followed by one or more d's
+				  'sd+',		# s followed by one or more d's
 				  'sd?',		# s followed by zero or one d's
 				  'sd{3}',		# s followed by three d's
 				  'sd{2,3}',	# s followed by two or three d's
@@ -46,7 +46,7 @@ test_patterns2 = [ '[a-z]',  		# lower case a to z
 
 
 test_text3 = 'This is a string with Numbers 1238, symbols #$hast, 234-real'
-test_patterns3 = [r'\d+',  	# sequence of digits, this is equivalent to the class [0-9].
+test_patterns3 = [r'\d+',  	    # sequence of digits, this is equivalent to the class [0-9].
 				  r'\D+',		# sequence of non digits, this is equivalent to the class [^0-9].
 				  r'\s+',		# sequence of whitespaces, this is equivalent to the class [ \t\n\r\f\v].
 				  r'\S+',		# sequence of non whitespaces, this is equivalent to the class [^ \t\n\r\f\v].

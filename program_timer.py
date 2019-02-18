@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 def program_performance(a, b, c):
     import timeit
     f1 = a.__name__

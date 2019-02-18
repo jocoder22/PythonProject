@@ -1,10 +1,18 @@
 #!/usr/bin/env python
 
+import os
+
+
+# path = "C:\\Users\\Jose\\Desktop\\ppp"
+# os.chdir(path)
+
 import time
 import timeit
 import string
 from program_timer import program_performance
 
+path = "C:\\Users\\Jose\\Desktop\\ppp"
+os.chdir(path)
 
 def numsum(str):
 	a_ = list(string.ascii_lowercase)
